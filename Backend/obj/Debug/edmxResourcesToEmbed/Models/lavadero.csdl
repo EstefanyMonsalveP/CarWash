@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lavaderoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CARGO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EMPLEADOes" Relationship="Self.FK__EMPLEADO__CARGO__34C8D9D1" FromRole="CARGOS" ToRole="EMPLEADO" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="DOCUMENTO" />
+    </Key>
+    <Property Name="DOCUMENTO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FACTURAs" Relationship="Self.FK__FACTURA__CEDULA___3A81B327" FromRole="CLIENTE" ToRole="FACTURA" />
+    <NavigationProperty Name="QUEJA_RECLAMO" Relationship="Self.FK__QUEJA_REC__CEDUL__267ABA7A" FromRole="CLIENTE" ToRole="QUEJA_RECLAMO" />
+    <NavigationProperty Name="VEHICULOes" Relationship="Self.FK__VEHICULO__PROPIE__2B3F6F97" FromRole="CLIENTE" ToRole="VEHICULO" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="CEDULA" />
+    </Key>
+    <Property Name="CEDULA" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CARGO" Type="Int32" />
+    <Property Name="TURNO" Type="Int32" />
+    <NavigationProperty Name="CARGO1" Relationship="Self.FK__EMPLEADO__CARGO__34C8D9D1" FromRole="EMPLEADO" ToRole="CARGOS" />
+    <NavigationProperty Name="TURNO1" Relationship="Self.FK__EMPLEADO__TURNO__35BCFE0A" FromRole="EMPLEADO" ToRole="TURNOS" />
+    <NavigationProperty Name="FACTURAs" Relationship="Self.FACTURA_EMPLEADO" FromRole="EMPLEADO" ToRole="FACTURA" />
+  </EntityType>
+  <EntityType Name="FACTURA">
+    <Key>
+      <PropertyRef Name="ID_FACTURA" />
+    </Key>
+    <Property Name="ID_FACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FECHA" Type="DateTime" Precision="0" />
+    <Property Name="CEDULA_CLIENTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="FORMA_PAGO" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="VALOR_TOTAL" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK__FACTURA__CEDULA___3A81B327" FromRole="FACTURA" ToRole="CLIENTE" />
+    <NavigationProperty Name="FORMA_PAGO1" Relationship="Self.FK__FACTURA__FORMA_P__3B75D760" FromRole="FACTURA" ToRole="FORMA_PAGO" />
+    <NavigationProperty Name="EMPLEADOes" Relationship="Self.FACTURA_EMPLEADO" FromRole="FACTURA" ToRole="EMPLEADO" />
+    <NavigationProperty Name="SERVICIOS" Relationship="Self.FACTURA_SERVICIO" FromRole="FACTURA" ToRole="SERVICIOS" />
+  </EntityType>
+  <EntityType Name="FORMA_PAGO">
+    <Key>
+      <PropertyRef Name="ID_PAGO" />
+    </Key>
+    <Property Name="ID_PAGO" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION_PAGO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="FACTURAs" Relationship="Self.FK__FACTURA__FORMA_P__3B75D760" FromRole="FORMA_PAGO" ToRole="FACTURA" />
+  </EntityType>
+  <EntityType Name="PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID_PRODUCTO" />
+    </Key>
+    <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION_PRO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO_PRO" Type="Int32" />
+    <Property Name="VALOR_PRODUCTO" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="TIPO_PRODUCTO" Relationship="Self.FK__PRODUCTO__TIPO_P__4CA06362" FromRole="PRODUCTO" ToRole="TIPO_PRODUCTO" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="Self.PROVEEDOR_PRODUCTO" FromRole="PRODUCTO" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="PROVEEDORE">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TELEFONO_PROVEEDOR" Relationship="Self.FK__TELEFONO___ID_PR__49C3F6B7" FromRole="PROVEEDORES" ToRole="TELEFONO_PROVEEDOR" />
+    <NavigationProperty Name="PRODUCTOes" Relationship="Self.PROVEEDOR_PRODUCTO" FromRole="PROVEEDORES" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="QUEJA_RECLAMO">
+    <Key>
+      <PropertyRef Name="ID_QUEJA" />
+    </Key>
+    <Property Name="ID_QUEJA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCIÓN_QUEJA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CEDULA_CLIENTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK__QUEJA_REC__CEDUL__267ABA7A" FromRole="QUEJA_RECLAMO" ToRole="CLIENTE" />
+  </EntityType>
+  <EntityType Name="SERVICIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VALOR" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="FACTURAs" Relationship="Self.FACTURA_SERVICIO" FromRole="SERVICIOS" ToRole="FACTURA" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TELEFONO_PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+      <PropertyRef Name="TELEFONO" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="PROVEEDORE" Relationship="Self.FK__TELEFONO___ID_PR__49C3F6B7" FromRole="TELEFONO_PROVEEDOR" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="TIPO_PRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PRODUCTOes" Relationship="Self.FK__PRODUCTO__TIPO_P__4CA06362" FromRole="TIPO_PRODUCTO" ToRole="PRODUCTO" />
+  </EntityType>
+  <EntityType Name="TIPOVEHICULO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="VEHICULOes" Relationship="Self.FK__VEHICULO__TIPO__2C3393D0" FromRole="TIPOVEHICULO" ToRole="VEHICULO" />
+  </EntityType>
+  <EntityType Name="TURNO">
+    <Key>
+      <PropertyRef Name="ID_TURNO" />
+    </Key>
+    <Property Name="ID_TURNO" Type="Int32" Nullable="false" />
+    <Property Name="DESCRIPCION_TURNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EMPLEADOes" Relationship="Self.FK__EMPLEADO__TURNO__35BCFE0A" FromRole="TURNOS" ToRole="EMPLEADO" />
+  </EntityType>
+  <EntityType Name="VEHICULO">
+    <Key>
+      <PropertyRef Name="PLACA" />
+    </Key>
+    <Property Name="PLACA" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MODELO" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="PROPIETARIO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="TIPO" Type="Int32" />
+    <NavigationProperty Name="CLIENTE" Relationship="Self.FK__VEHICULO__PROPIE__2B3F6F97" FromRole="VEHICULO" ToRole="CLIENTE" />
+    <NavigationProperty Name="TIPOVEHICULO" Relationship="Self.FK__VEHICULO__TIPO__2C3393D0" FromRole="VEHICULO" ToRole="TIPOVEHICULO" />
+  </EntityType>
+  <Association Name="FK__EMPLEADO__CARGO__34C8D9D1">
+    <End Role="CARGOS" Type="Self.CARGO" Multiplicity="0..1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARGOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="CARGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURA__CEDULA___3A81B327">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="DOCUMENTO" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="CEDULA_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QUEJA_REC__CEDUL__267ABA7A">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="QUEJA_RECLAMO" Type="Self.QUEJA_RECLAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="DOCUMENTO" />
+      </Principal>
+      <Dependent Role="QUEJA_RECLAMO">
+        <PropertyRef Name="CEDULA_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VEHICULO__PROPIE__2B3F6F97">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="DOCUMENTO" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="PROPIETARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EMPLEADO__TURNO__35BCFE0A">
+    <End Role="TURNOS" Type="Self.TURNO" Multiplicity="0..1" />
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TURNOS">
+        <PropertyRef Name="ID_TURNO" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="TURNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FACTURA__FORMA_P__3B75D760">
+    <End Role="FORMA_PAGO" Type="Self.FORMA_PAGO" Multiplicity="0..1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMA_PAGO">
+        <PropertyRef Name="ID_PAGO" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="FORMA_PAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PRODUCTO__TIPO_P__4CA06362">
+    <End Role="TIPO_PRODUCTO" Type="Self.TIPO_PRODUCTO" Multiplicity="0..1" />
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTO">
+        <PropertyRef Name="TIPO_PRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TELEFONO___ID_PR__49C3F6B7">
+    <End Role="PROVEEDORES" Type="Self.PROVEEDORE" Multiplicity="1" />
+    <End Role="TELEFONO_PROVEEDOR" Type="Self.TELEFONO_PROVEEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="ID_PROVEEDOR" />
+      </Principal>
+      <Dependent Role="TELEFONO_PROVEEDOR">
+        <PropertyRef Name="ID_PROVEEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VEHICULO__TIPO__2C3393D0">
+    <End Role="TIPOVEHICULO" Type="Self.TIPOVEHICULO" Multiplicity="0..1" />
+    <End Role="VEHICULO" Type="Self.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOVEHICULO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FACTURA_EMPLEADO">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+  </Association>
+  <Association Name="FACTURA_SERVICIO">
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <End Role="SERVICIOS" Type="Self.SERVICIO" Multiplicity="*" />
+  </Association>
+  <Association Name="PROVEEDOR_PRODUCTO">
+    <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
+    <End Role="PROVEEDORES" Type="Self.PROVEEDORE" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="lavaderoEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CARGOS" EntityType="Self.CARGO" />
+    <EntitySet Name="CLIENTEs" EntityType="Self.CLIENTE" />
+    <EntitySet Name="EMPLEADOes" EntityType="Self.EMPLEADO" />
+    <EntitySet Name="FACTURAs" EntityType="Self.FACTURA" />
+    <EntitySet Name="FORMA_PAGO" EntityType="Self.FORMA_PAGO" />
+    <EntitySet Name="PRODUCTOes" EntityType="Self.PRODUCTO" />
+    <EntitySet Name="PROVEEDORES" EntityType="Self.PROVEEDORE" />
+    <EntitySet Name="QUEJA_RECLAMO" EntityType="Self.QUEJA_RECLAMO" />
+    <EntitySet Name="SERVICIOS" EntityType="Self.SERVICIO" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TELEFONO_PROVEEDOR" EntityType="Self.TELEFONO_PROVEEDOR" />
+    <EntitySet Name="TIPO_PRODUCTO" EntityType="Self.TIPO_PRODUCTO" />
+    <EntitySet Name="TIPOVEHICULOes" EntityType="Self.TIPOVEHICULO" />
+    <EntitySet Name="TURNOS" EntityType="Self.TURNO" />
+    <EntitySet Name="VEHICULOes" EntityType="Self.VEHICULO" />
+    <AssociationSet Name="FK__EMPLEADO__CARGO__34C8D9D1" Association="Self.FK__EMPLEADO__CARGO__34C8D9D1">
+      <End Role="CARGOS" EntitySet="CARGOS" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURA__CEDULA___3A81B327" Association="Self.FK__FACTURA__CEDULA___3A81B327">
+      <End Role="CLIENTE" EntitySet="CLIENTEs" />
+      <End Role="FACTURA" EntitySet="FACTURAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QUEJA_REC__CEDUL__267ABA7A" Association="Self.FK__QUEJA_REC__CEDUL__267ABA7A">
+      <End Role="CLIENTE" EntitySet="CLIENTEs" />
+      <End Role="QUEJA_RECLAMO" EntitySet="QUEJA_RECLAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VEHICULO__PROPIE__2B3F6F97" Association="Self.FK__VEHICULO__PROPIE__2B3F6F97">
+      <End Role="CLIENTE" EntitySet="CLIENTEs" />
+      <End Role="VEHICULO" EntitySet="VEHICULOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EMPLEADO__TURNO__35BCFE0A" Association="Self.FK__EMPLEADO__TURNO__35BCFE0A">
+      <End Role="TURNOS" EntitySet="TURNOS" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FACTURA__FORMA_P__3B75D760" Association="Self.FK__FACTURA__FORMA_P__3B75D760">
+      <End Role="FORMA_PAGO" EntitySet="FORMA_PAGO" />
+      <End Role="FACTURA" EntitySet="FACTURAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PRODUCTO__TIPO_P__4CA06362" Association="Self.FK__PRODUCTO__TIPO_P__4CA06362">
+      <End Role="TIPO_PRODUCTO" EntitySet="TIPO_PRODUCTO" />
+      <End Role="PRODUCTO" EntitySet="PRODUCTOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TELEFONO___ID_PR__49C3F6B7" Association="Self.FK__TELEFONO___ID_PR__49C3F6B7">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="TELEFONO_PROVEEDOR" EntitySet="TELEFONO_PROVEEDOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VEHICULO__TIPO__2C3393D0" Association="Self.FK__VEHICULO__TIPO__2C3393D0">
+      <End Role="TIPOVEHICULO" EntitySet="TIPOVEHICULOes" />
+      <End Role="VEHICULO" EntitySet="VEHICULOes" />
+    </AssociationSet>
+    <AssociationSet Name="FACTURA_EMPLEADO" Association="Self.FACTURA_EMPLEADO">
+      <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
+      <End Role="FACTURA" EntitySet="FACTURAs" />
+    </AssociationSet>
+    <AssociationSet Name="FACTURA_SERVICIO" Association="Self.FACTURA_SERVICIO">
+      <End Role="FACTURA" EntitySet="FACTURAs" />
+      <End Role="SERVICIOS" EntitySet="SERVICIOS" />
+    </AssociationSet>
+    <AssociationSet Name="PROVEEDOR_PRODUCTO" Association="Self.PROVEEDOR_PRODUCTO">
+      <End Role="PRODUCTO" EntitySet="PRODUCTOes" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

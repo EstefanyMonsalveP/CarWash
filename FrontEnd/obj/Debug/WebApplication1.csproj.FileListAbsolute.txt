@@ -1,0 +1,438 @@
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\WebApplication1.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\WebApplication1.pdb
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\csc.exe
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\csi.exe
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Net.Http.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\WebGrease.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\user\Documents\Servicios Web\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\Documents\Servicios Web\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Servicios Web\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Servicios Web\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+C:\Users\user\Documents\Servicios Web\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\user\Documents\Servicios Web\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\WebApplication1.dll.config
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\WebApplication1.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\WebApplication1.pdb
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\csc.exe
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\csc.exe.config
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\csc.rsp
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\csi.exe
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\csi.exe.config
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\csi.rsp
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.AppContext.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Console.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.Compression.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Net.Http.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Net.Sockets.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\vbc.exe
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\vbc.exe.config
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\vbc.rsp
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Antlr3.Runtime.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Newtonsoft.Json.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\System.Web.Optimization.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\WebGrease.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\System.Web.Optimization.xml
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Newtonsoft.Json.xml
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Antlr3.Runtime.pdb
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CopyComplete
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.dll
+C:\Users\user\Documents\Servicios Web\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.pdb
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\WebApplication1.dll.config
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\WebApplication1.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\WebApplication1.pdb
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\csc.exe
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\csc.exe.config
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\csc.rsp
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\csi.exe
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\csi.exe.config
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\csi.rsp
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.AppContext.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Console.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.Compression.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Net.Http.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Net.Sockets.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.ValueTuple.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\vbc.exe
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\vbc.exe.config
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\vbc.rsp
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Antlr3.Runtime.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\System.Web.Optimization.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\WebGrease.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\System.Web.Optimization.xml
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Antlr3.Runtime.pdb
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CopyComplete
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.dll
+C:\Users\user\Desktop\Trabajo Final\Frontend_Lavadero\obj\Debug\WebApplication1.pdb
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.dll.config
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.pdb
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.exe
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.exe.config
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.rsp
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.exe
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.exe.config
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.rsp
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Managed.Core.targets
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.AppContext.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Collections.Immutable.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Console.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Globalization.Calendars.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.Compression.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Net.Http.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Net.Sockets.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Reflection.Metadata.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.ValueTuple.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XmlDocument.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.exe
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.exe.config
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.rsp
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe.config
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Antlr3.Runtime.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\AspNet.ScriptManager.jQuery.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.ScriptManager.WebForms.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.Web.Infrastructure.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Newtonsoft.Json.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\System.Web.Optimization.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebGrease.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\System.Web.Optimization.xml
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Newtonsoft.Json.xml
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Antlr3.Runtime.pdb
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.dll
+D:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.pdb
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.dll.config
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.pdb
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.exe
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.exe.config
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.rsp
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.exe
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.exe.config
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.rsp
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Managed.Core.targets
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.AppContext.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Collections.Immutable.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Console.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Globalization.Calendars.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.Compression.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Net.Http.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Net.Sockets.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Reflection.Metadata.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.ValueTuple.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XmlDocument.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.exe
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.exe.config
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.rsp
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe.config
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Antlr3.Runtime.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\AspNet.ScriptManager.jQuery.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.ScriptManager.MSAjax.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.ScriptManager.WebForms.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.Web.Infrastructure.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Newtonsoft.Json.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\System.Web.Optimization.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebGrease.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\System.Web.Optimization.xml
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Newtonsoft.Json.xml
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Antlr3.Runtime.pdb
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CopyComplete
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.dll
+E:\SERVICIO LAVAAUTOS\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.pdb
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.dll.config
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebApplication1.pdb
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.exe
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.exe.config
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csc.rsp
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.exe
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.exe.config
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\csi.rsp
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Managed.Core.targets
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.AppContext.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Collections.Immutable.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Console.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Globalization.Calendars.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.Compression.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Net.Http.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Net.Sockets.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Reflection.Metadata.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.ValueTuple.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XmlDocument.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.exe
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.exe.config
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\vbc.rsp
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\roslyn\VBCSCompiler.exe.config
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Antlr3.Runtime.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\AspNet.ScriptManager.jQuery.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.ScriptManager.WebForms.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.Web.Infrastructure.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Newtonsoft.Json.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\System.Web.Optimization.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\WebGrease.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\System.Web.Optimization.xml
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Newtonsoft.Json.xml
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Antlr3.Runtime.pdb
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.dll
+D:\LAVADERO AUTOS ESTEFANY MONSALVE - DAVID URREGO\Frontend_Lavadero 3\Frontend_Lavadero\obj\Debug\WebApplication1.pdb
