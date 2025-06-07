@@ -14,7 +14,7 @@ Este proyecto es una aplicación web diseñada para gestionar las operaciones b�
 ## 🛠️ Tecnologías utilizadas
 
 - **Backend:** C# con .NET Framework 4.8 (API REST)
-- **Frontend:** ASP.NET
+- **Frontend:** ASP.NET , JS, CSS, HTML
 - **Base de datos:** SQL Server
 - **Comunicación:** CORS habilitado entre cliente y servidor
 
