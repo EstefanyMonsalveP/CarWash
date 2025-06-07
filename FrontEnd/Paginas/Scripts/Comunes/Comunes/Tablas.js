@@ -9,7 +9,17 @@
                     "Content-Type": "application/json"
                 }
             });
-        const Rpta = await Respuesta.json();
+        let Rpta = await Respuesta.json();
+
+        //Verifica si la respuesta no es un array o es un array vacio
+        //Mantiene las columnas de la tabla, limpia los datos y redibuja la tabla (Sin datos)
+        if (!Array.isArray(Rpta) || Rpta.length === 0) {
+            const tabla = $(TablaLlenar).DataTable();
+            tabla.clear().draw();
+            return;
+        }
+
+       
         //Se recorre en un ciclo para llenar la tabla, con encabezados y los campos
         //Llena el encabezado
         var Columnas = [];
@@ -19,6 +29,10 @@
                 data: NombreColumnas[i],
                 title: NombreColumnas[i]
             });
+        }
+
+        if (!Array.isArray(Rpta) || Rpta.length === 0) {
+            Rpta = []
         }
         //Llena los datos
         $(TablaLlenar).DataTable({
