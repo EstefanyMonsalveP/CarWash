@@ -15,7 +15,7 @@ Este proyecto es una aplicación web diseñada para gestionar las operaciones b�
 
 - **Backend:** C# con .NET Framework 4.8 (API REST)
 - **Frontend:** ASP.NET
-- **Base de datos:** SQL Server (o el que estés usando)
+- **Base de datos:** SQL Server
 - **Comunicación:** CORS habilitado entre cliente y servidor
 
 ## 🗂️ Estructura del Proyecto
