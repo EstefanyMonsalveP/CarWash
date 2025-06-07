@@ -35,11 +35,11 @@ async function Consultar() {
         });
 
         const Resultado = await respuesta.json();
-        $("#txtNombre").val(Resultado.Nombre);
-        $("#txtApellido").val(Resultado.Apellido);
-        $("#txtTelefono").val(Resultado.Telefono);
-        $("#txtEmail").val(Resultado.Email);
-        $("#txtDireccion").val(Resultado.Direccion);
+        $("#txtNombre").val(Resultado.NOMBRE);
+        $("#txtApellido").val(Resultado.APELLIDO);
+        $("#txtTelefono").val(Resultado.TELEFONO);
+        $("#txtEmail").val(Resultado.EMAIL);
+        $("#txtDireccion").val(Resultado.DIRECCION);
     } catch (error) {
         console.error("Error:", error);
         $("#dvMensaje").html('Error: ' + error.message);
@@ -55,12 +55,12 @@ async function EjecutarComando(Comando) {
     let Direccion = $("#txtDireccion").val();
 
     let DatosCliente = {
-        Documento: Documento,
-        Nombre: Nombre,
-        Apellido: Apellido,
-        Telefono: Telefono,
-        Email: Email,
-        Direccion: Direccion,
+        DOCUMENTO: Documento,
+        NOMBRE: Nombre,
+        APELLIDO: Apellido,
+        TELEFONO: Telefono,
+        EMAIL: Email,
+        DIRECCION: Direccion,
     }
 
     try {
