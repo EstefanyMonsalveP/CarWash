@@ -11,15 +11,19 @@ namespace Servicios_lavadero.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using Newtonsoft.Json;
+
+
     public partial class VEHICULO
     {
         public string PLACA { get; set; }
         public string MODELO { get; set; }
         public string PROPIETARIO { get; set; }
         public Nullable<int> TIPO { get; set; }
-    
+
+        [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
+        [JsonIgnore]
         public virtual TIPOVEHICULO TIPOVEHICULO { get; set; }
     }
 }
