@@ -19,7 +19,6 @@ namespace Servicios_lavadero.Models
         public string DESCRIPCIÓN_QUEJA { get; set; }
         public string CEDULA_CLIENTE { get; set; }
 
-        [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
     }
 }

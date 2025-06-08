@@ -62,7 +62,7 @@ async function Consultar() {
 
         $("#txtIdQueja").val(resultado.ID_QUEJA);
         $("#cboCedula").val(resultado.CEDULA_CLIENTE);
-        $("#txtIdQueja").val(resultado.DESCRIPCION_QUEJA);
+        $("#txtQueja").val(resultado.DESCRIPCIÓN_QUEJA);
 
     } catch (error) {
         $("#dvMensaje").html(error);
@@ -75,13 +75,13 @@ async function EjecutarComando(comando) {
     jQuery y se asignan a variables locales.*/
     let id_Queja = $("#txtIdQueja").val();
     let cliente = $("#cboCedula").val();
-    let descripcion_Queja = $("#txtIdQueja").val();
+    let descripcion_Queja = $("#txtQueja").val();
 
     //Construir la estructura JSON para enviar la información al servidor
     let datosQueja = {
         ID_QUEJA: id_Queja,
         CEDULA_CLIENTE: cliente,
-        DESCRIPCION_QUEJA: descripcion_Queja,
+        DESCRIPCIÓN_QUEJA: descripcion_Queja,
     }
     try {
         const respuesta = await fetch("https://localhost:44367/api/Queja_Reclamos", {
