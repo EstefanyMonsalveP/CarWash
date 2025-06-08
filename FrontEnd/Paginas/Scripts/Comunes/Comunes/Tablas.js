@@ -19,7 +19,7 @@
             return;
         }
 
-       
+
         //Se recorre en un ciclo para llenar la tabla, con encabezados y los campos
         //Llena el encabezado
         var Columnas = [];
@@ -31,9 +31,6 @@
             });
         }
 
-        if (!Array.isArray(Rpta) || Rpta.length === 0) {
-            Rpta = []
-        }
         //Llena los datos
         $(TablaLlenar).DataTable({
             data: Rpta,
