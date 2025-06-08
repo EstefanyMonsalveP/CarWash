@@ -2,7 +2,7 @@
     //Registrar los botones para responder al evento click
     $("#dvMenu").load("../Paginas/Menu.html");
     LlenarComboCliente();
-    LlenarTablaVehiculos();
+    LlenarTablaQuejas();
 
     $("#btnInsertar").on("click", function () {
         EjecutarComando("POST");
@@ -33,10 +33,10 @@ async function LlenarComboCliente() {
             });
         const Rpta = await Respuesta.json();
         //Se debe limpiar el combo
-        $("#cboPropietario").empty();
+        $("#cboCedula").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboPropietario").append('<option value=' + Rpta[i].DOCUMENTO + '>' + Rpta[i].NOMBRE + '</option>');
+            $("#cboCedula").append('<option value=' + Rpta[i].DOCUMENTO + '>' + Rpta[i].DOCUMENTO + ' - ' + Rpta[i].NOMBRE + ' ' + Rpta[i].APELLIDO + '</option>');
         }
     }
     catch (error) {
@@ -45,14 +45,14 @@ async function LlenarComboCliente() {
     }
 }
 
-async function LlenarTablaVehiculos() {
-    LlenarTablaXServicios("https://localhost:44367/api/Vehiculos", "#tblEmpleados");
+async function LlenarTablaQuejas() {
+    LlenarTablaXServicios("https://localhost:44367/api/Queja_Reclamos", "#tblQuejas");
 }
 
 async function Consultar() {
-    let placa = $("#").val();
+    let id_Queja = $("#txtIdQueja").val();
     try {
-        const respuesta = await fetch("https://localhost:44367/api/Vehiculos?Placa=" + placa, {
+        const respuesta = await fetch("https://localhost:44367/api/Queja_Reclamos?idQueja=" + id_Queja, {
             method: "GET",
             mode: "cors",
             headers: { "Content-type": "application/json" },
@@ -60,9 +60,9 @@ async function Consultar() {
 
         const resultado = await respuesta.json();
 
-        $("#txtModelo").val(resultado.MODELO);
-        $("#cboPropietario").val(resultado.PROPIETARIO);
-        $("#cboTipoVehiculo").val(resultado.TIPO);
+        $("#txtIdQueja").val(resultado.ID_QUEJA);
+        $("#cboCedula").val(resultado.CEDULA_CLIENTE);
+        $("#txtIdQueja").val(resultado.DESCRIPCION_QUEJA);
 
     } catch (error) {
         $("#dvMensaje").html(error);
@@ -73,24 +73,22 @@ async function Consultar() {
 async function EjecutarComando(comando) {
     /*Se capturan los datos de entrada del formulario HTML. Los valores de los campos del formulario se obtienen utilizando
     jQuery y se asignan a variables locales.*/
-    let placa = $("#txtPlaca").val();
-    let modelo = $("#txtModelo").val();
-    let propietarioVehiculo = $("#cboPropietario").val();
-    let tipoVehiculo = $("#cboTipoVehiculo").val();
+    let id_Queja = $("#txtIdQueja").val();
+    let cliente = $("#cboCedula").val();
+    let descripcion_Queja = $("#txtIdQueja").val();
 
     //Construir la estructura JSON para enviar la información al servidor
-    let datosVehiculo = {
-        PLACA: placa,
-        MODELO: modelo,
-        PROPIETARIO: propietarioVehiculo,
-        TIPO: tipoVehiculo
+    let datosQueja = {
+        ID_QUEJA: id_Queja,
+        CEDULA_CLIENTE: cliente,
+        DESCRIPCION_QUEJA: descripcion_Queja,
     }
     try {
-        const respuesta = await fetch("https://localhost:44367/api/Vehiculos", {
+        const respuesta = await fetch("https://localhost:44367/api/Queja_Reclamos", {
             method: comando,
             mode: "cors",
             headers: { "Content-type": "application/json" },
-            body: JSON.stringify(datosVehiculo)
+            body: JSON.stringify(datosQueja)
         });
         //Leer la respuesta y presentarla en el div
         const resultado = await respuesta.json();
