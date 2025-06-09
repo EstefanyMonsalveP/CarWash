@@ -16,7 +16,7 @@ namespace Servicios_lavadero.Clases
         {
             dbLavadero.QUEJA_RECLAMO.Add(_quejaReclamo);
             dbLavadero.SaveChanges();
-            return "Se ha agregado la queja de : " + _quejaReclamo.CLIENTE + "con exito";
+            return "Se ha agregado la queja de : " + _quejaReclamo.CEDULA_CLIENTE + "con exito";
         }
 
         public QUEJA_RECLAMO ConsultarQueja(int idQueja)
@@ -32,8 +32,6 @@ namespace Servicios_lavadero.Clases
                    orderby C.NOMBRE
                    select new
                    {
-                       Editar = "<button type=\"button\" id=\"btnEdit\" class=\"btn-block btn-sm btn-danger\" " +
-                                 "onclick=\"Editar('" + QR.ID_QUEJA + "', '" + QR.DESCRIPCIÓN_QUEJA + "', '" + C.DOCUMENTO+ "')\">EDIT</button>",
                        ID_QUEJA = QR.ID_QUEJA,
                        DESCRIPCIÓN_QUEJA = QR.DESCRIPCIÓN_QUEJA,
                        CEDULA_CLIENTE = C.DOCUMENTO + " " + C.NOMBRE + " " + C.APELLIDO
@@ -50,7 +48,7 @@ namespace Servicios_lavadero.Clases
             QUEJA_RECLAMO quejaReclamo = ConsultarQueja(_quejaReclamo.ID_QUEJA);
             dbLavadero.QUEJA_RECLAMO.Remove(quejaReclamo);
             dbLavadero.SaveChanges();
-            return "Se ha eliminado la queja con id " + _quejaReclamo.ID_QUEJA + "del usuario:" + _quejaReclamo.CEDULA_CLIENTE;
+            return "Se ha eliminado la queja con id " + " " +_quejaReclamo.ID_QUEJA + "del usuario:" + _quejaReclamo.CEDULA_CLIENTE;
         }
 
 
