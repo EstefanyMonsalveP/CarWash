@@ -12,30 +12,29 @@ video {
     object-fit: cover;
 }
 
-.capa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #1c1c1d;
-    opacity: 0.5;
-    mix-blend-mode: overlay;
-}
 
 .menu{
-    padding-top:350px;
+    display:flex;
+    flex-direction: row;
+    padding-top:50vh;
     color:blue;
     border-radius: 10px;
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
     align-items:center;
     width:60%;
     margin:auto;
     position:relative;
     z-index:2;
 }
+
+@media (max-width: 912px) {
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 32vh;
+    }
+}
+
+
 
 .boton {
     display: inline-block;
