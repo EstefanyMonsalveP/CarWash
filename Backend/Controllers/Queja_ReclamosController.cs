@@ -42,12 +42,12 @@ namespace Servicios_lavadero.Controllers
             return _clsQuejaReclamo.ActualizarQueja();
         }
 
-        // DELETE api/<controller>/5
-        //public string Delete([FromBody] QUEJA_RECLAMO quejaReclamo_eliminiar)
-        //{
-        //    clsQueja_Reclamo _clsQuejaReclamo = new clsQueja_Reclamo();
-        //    _clsQuejaReclamo._quejaReclamo = quejaReclamo_eliminiar;
-        //    return _clsQuejaReclamo.EliminarQueja();
-        //}
+        //DELETE api/<controller>/5
+        public string Delete([FromBody] QUEJA_RECLAMO quejaReclamo_eliminar)
+        {
+            clsQueja_Reclamo _clsQuejaReclamo = new clsQueja_Reclamo();
+            _clsQuejaReclamo._quejaReclamo = quejaReclamo_eliminar;
+            return _clsQuejaReclamo.EliminarQueja();
+        }
     }
 }

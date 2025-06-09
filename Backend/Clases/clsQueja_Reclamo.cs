@@ -21,7 +21,8 @@ namespace Servicios_lavadero.Clases
 
         public QUEJA_RECLAMO ConsultarQueja(int idQueja)
         {
-            return dbLavadero.QUEJA_RECLAMO.FirstOrDefault(qr=>qr.ID_QUEJA == idQueja);
+           return dbLavadero.QUEJA_RECLAMO.FirstOrDefault(qr=>qr.ID_QUEJA == idQueja);
+            
         }
         public IQueryable ListarQuejas()
         {
@@ -42,15 +43,15 @@ namespace Servicios_lavadero.Clases
         {
             dbLavadero.QUEJA_RECLAMO.AddOrUpdate(_quejaReclamo);
             dbLavadero.SaveChanges();
-            return "Se ha actualizado con exito la Queja/Reclamo de: " + _quejaReclamo.CLIENTE ;
+            return "Se ha actualizado con exito la Queja/Reclamo de: " + _quejaReclamo.CEDULA_CLIENTE ;
         }
-        //public string EliminarQueja()
-        //{
-        //    QUEJA_RECLAMO quejaReclamo = ConsultarQueja(_quejaReclamo.CEDULA_CLIENTE);
-        //    dbLavadero.QUEJA_RECLAMO.Remove(quejaReclamo);
-        //    dbLavadero.SaveChanges();
-        //    return "Se ha eliminado la queja de: " + _quejaReclamo.CLIENTE;
-        //}
+        public string EliminarQueja()
+        {
+            QUEJA_RECLAMO quejaReclamo = ConsultarQueja(_quejaReclamo.ID_QUEJA);
+            dbLavadero.QUEJA_RECLAMO.Remove(quejaReclamo);
+            dbLavadero.SaveChanges();
+            return "Se ha eliminado la queja con id " + _quejaReclamo.ID_QUEJA + "del usuario:" + _quejaReclamo.CEDULA_CLIENTE;
+        }
 
 
     }
