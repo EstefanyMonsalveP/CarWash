@@ -60,7 +60,7 @@ async function Consultar() {
 
         const resultado = await respuesta.json();
 
-        if (!Array.isArray(resultado) || resultado.length === 0) {
+        if (!resultado || Object.keys(resultado).length === 0) {
             return $("#dvMensaje").html("No se encontro el id de la queja relacionada");
         }
 
