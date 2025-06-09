@@ -1,6 +1,6 @@
 ﻿jQuery(function () {
     //Registrar los botones para responder al evento click
-    $("#dvMenu").load("../Paginas/Menu.html");
+    $("#dvMenu").load("Menu.html");
     LlenarComboCliente();
     LlenarTablaQuejas();
 

@@ -1,6 +1,6 @@
 ﻿jQuery(function () {
     //Registrar los botones para responder al evento click
-    $("#dvMenu").load("../Paginas/Menu.html");
+    $("#dvMenu").load("Menu.html");
     //Activar el evento de click en los botones que vamos a programar
     //Con jquery, los objetos se identifican con "$(#" al inicio del nombre del objeto
     /*LlenarTablaEmpleados();*/
