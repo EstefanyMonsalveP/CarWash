@@ -12,12 +12,13 @@ namespace Servicios_lavadero.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class FACTURA_SERVICIO
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ID_FACTURA { get; set; }
+        public int ID_SERVICIO { get; set; }
+        public Nullable<int> CANTIDAD { get; set; }
+    
+        public virtual FACTURA FACTURA { get; set; }
+        public virtual SERVICIO SERVICIO { get; set; }
     }
 }

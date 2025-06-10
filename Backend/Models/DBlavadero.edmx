@@ -60,6 +60,7 @@
           </Key>
           <Property Name="ID_FACTURA" Type="int" Nullable="false" />
           <Property Name="ID_SERVICIO" Type="int" Nullable="false" />
+          <Property Name="CANTIDAD" Type="int" />
         </EntityType>
         <EntityType Name="FORMA_PAGO">
           <Key>
@@ -75,32 +76,6 @@
           <Property Name="id" Type="int" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="pagina_navegar" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
-        <EntityType Name="PRODUCTO">
-          <Key>
-            <PropertyRef Name="ID_PRODUCTO" />
-          </Key>
-          <Property Name="ID_PRODUCTO" Type="int" Nullable="false" />
-          <Property Name="DESCRIPCION_PRO" Type="varchar" MaxLength="30" />
-          <Property Name="TIPO_PRO" Type="int" />
-          <Property Name="VALOR_PRODUCTO" Type="money" />
-        </EntityType>
-        <EntityType Name="PROVEEDOR_PRODUCTO">
-          <Key>
-            <PropertyRef Name="PROVEEDOR" />
-            <PropertyRef Name="PRODUCTO" />
-          </Key>
-          <Property Name="PROVEEDOR" Type="int" Nullable="false" />
-          <Property Name="PRODUCTO" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="PROVEEDORES">
-          <Key>
-            <PropertyRef Name="ID_PROVEEDOR" />
-          </Key>
-          <Property Name="ID_PROVEEDOR" Type="int" Nullable="false" />
-          <Property Name="NOMBRE" Type="varchar" MaxLength="35" />
-          <Property Name="EMAIL" Type="varchar" MaxLength="20" />
-          <Property Name="DIRECCION" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="QUEJA_RECLAMO">
           <Key>
@@ -127,21 +102,6 @@
           <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
-        <EntityType Name="TELEFONO_PROVEEDOR">
-          <Key>
-            <PropertyRef Name="ID_PROVEEDOR" />
-            <PropertyRef Name="TELEFONO" />
-          </Key>
-          <Property Name="ID_PROVEEDOR" Type="int" Nullable="false" />
-          <Property Name="TELEFONO" Type="varchar" MaxLength="15" Nullable="false" />
-        </EntityType>
-        <EntityType Name="TIPO_PRODUCTO">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DESCRIPCION" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="TIPOVEHICULO">
           <Key>
@@ -281,42 +241,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PRODUCTO__TIPO_P__4CA06362">
-          <End Role="TIPO_PRODUCTO" Type="Self.TIPO_PRODUCTO" Multiplicity="0..1" />
-          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TIPO_PRODUCTO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PRODUCTO">
-              <PropertyRef Name="TIPO_PRO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PROVEEDOR__PRODU__5070F446">
-          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
-          <End Role="PROVEEDOR_PRODUCTO" Type="Self.PROVEEDOR_PRODUCTO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PRODUCTO">
-              <PropertyRef Name="ID_PRODUCTO" />
-            </Principal>
-            <Dependent Role="PROVEEDOR_PRODUCTO">
-              <PropertyRef Name="PRODUCTO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PROVEEDOR__PROVE__4F7CD00D">
-          <End Role="PROVEEDORES" Type="Self.PROVEEDORES" Multiplicity="1" />
-          <End Role="PROVEEDOR_PRODUCTO" Type="Self.PROVEEDOR_PRODUCTO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROVEEDORES">
-              <PropertyRef Name="ID_PROVEEDOR" />
-            </Principal>
-            <Dependent Role="PROVEEDOR_PRODUCTO">
-              <PropertyRef Name="PROVEEDOR" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__QUEJA_REC__CEDUL__267ABA7A">
           <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
           <End Role="QUEJA_RECLAMO" Type="Self.QUEJA_RECLAMO" Multiplicity="*" />
@@ -329,19 +253,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TELEFONO___ID_PR__49C3F6B7">
-          <End Role="PROVEEDORES" Type="Self.PROVEEDORES" Multiplicity="1" />
-          <End Role="TELEFONO_PROVEEDOR" Type="Self.TELEFONO_PROVEEDOR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROVEEDORES">
-              <PropertyRef Name="ID_PROVEEDOR" />
-            </Principal>
-            <Dependent Role="TELEFONO_PROVEEDOR">
-              <PropertyRef Name="ID_PROVEEDOR" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__USUARIO__salt__74AE54BC">
+        <Association Name="FK__USUARIO__salt__534D60F1">
           <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -353,7 +265,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO_P__activ__778AC167">
+        <Association Name="FK__USUARIO_P__activ__5812160E">
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
           <End Role="USUARIO_PERFIL" Type="Self.USUARIO_PERFIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -365,7 +277,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO_P__id_pe__787EE5A0">
+        <Association Name="FK__USUARIO_P__id_pe__59063A47">
           <End Role="PERFIL" Type="Self.PERFIL" Multiplicity="1" />
           <End Role="USUARIO_PERFIL" Type="Self.USUARIO_PERFIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -403,6 +315,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CalcularTotalFactura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_FACTURA" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="LAVADEROModelStoreContainer">
           <EntitySet Name="CARGOS" EntityType="Self.CARGOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
@@ -412,14 +327,9 @@
           <EntitySet Name="FACTURA_SERVICIO" EntityType="Self.FACTURA_SERVICIO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FORMA_PAGO" EntityType="Self.FORMA_PAGO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PERFIL" EntityType="Self.PERFIL" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PROVEEDOR_PRODUCTO" EntityType="Self.PROVEEDOR_PRODUCTO" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PROVEEDORES" EntityType="Self.PROVEEDORES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="QUEJA_RECLAMO" EntityType="Self.QUEJA_RECLAMO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SERVICIOS" EntityType="Self.SERVICIOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TELEFONO_PROVEEDOR" EntityType="Self.TELEFONO_PROVEEDOR" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TIPO_PRODUCTO" EntityType="Self.TIPO_PRODUCTO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPOVEHICULO" EntityType="Self.TIPOVEHICULO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TURNOS" EntityType="Self.TURNOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
@@ -457,35 +367,19 @@
             <End Role="SERVICIOS" EntitySet="SERVICIOS" />
             <End Role="FACTURA_SERVICIO" EntitySet="FACTURA_SERVICIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO__TIPO_P__4CA06362" Association="Self.FK__PRODUCTO__TIPO_P__4CA06362">
-            <End Role="TIPO_PRODUCTO" EntitySet="TIPO_PRODUCTO" />
-            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PROVEEDOR__PRODU__5070F446" Association="Self.FK__PROVEEDOR__PRODU__5070F446">
-            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
-            <End Role="PROVEEDOR_PRODUCTO" EntitySet="PROVEEDOR_PRODUCTO" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PROVEEDOR__PROVE__4F7CD00D" Association="Self.FK__PROVEEDOR__PROVE__4F7CD00D">
-            <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
-            <End Role="PROVEEDOR_PRODUCTO" EntitySet="PROVEEDOR_PRODUCTO" />
-          </AssociationSet>
           <AssociationSet Name="FK__QUEJA_REC__CEDUL__267ABA7A" Association="Self.FK__QUEJA_REC__CEDUL__267ABA7A">
             <End Role="CLIENTE" EntitySet="CLIENTE" />
             <End Role="QUEJA_RECLAMO" EntitySet="QUEJA_RECLAMO" />
           </AssociationSet>
-          <AssociationSet Name="FK__TELEFONO___ID_PR__49C3F6B7" Association="Self.FK__TELEFONO___ID_PR__49C3F6B7">
-            <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
-            <End Role="TELEFONO_PROVEEDOR" EntitySet="TELEFONO_PROVEEDOR" />
-          </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__salt__74AE54BC" Association="Self.FK__USUARIO__salt__74AE54BC">
+          <AssociationSet Name="FK__USUARIO__salt__534D60F1" Association="Self.FK__USUARIO__salt__534D60F1">
             <End Role="EMPLEADO" EntitySet="EMPLEADO" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO_P__activ__778AC167" Association="Self.FK__USUARIO_P__activ__778AC167">
+          <AssociationSet Name="FK__USUARIO_P__activ__5812160E" Association="Self.FK__USUARIO_P__activ__5812160E">
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="USUARIO_PERFIL" EntitySet="USUARIO_PERFIL" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO_P__id_pe__787EE5A0" Association="Self.FK__USUARIO_P__id_pe__787EE5A0">
+          <AssociationSet Name="FK__USUARIO_P__id_pe__59063A47" Association="Self.FK__USUARIO_P__id_pe__59063A47">
             <End Role="PERFIL" EntitySet="PERFIL" />
             <End Role="USUARIO_PERFIL" EntitySet="USUARIO_PERFIL" />
           </AssociationSet>
@@ -538,7 +432,7 @@
           <Property Name="TURNO" Type="Int32" />
           <NavigationProperty Name="CARGO1" Relationship="Self.FK__EMPLEADO__CARGO__34C8D9D1" FromRole="EMPLEADO" ToRole="CARGOS" />
           <NavigationProperty Name="TURNO1" Relationship="Self.FK__EMPLEADO__TURNO__35BCFE0A" FromRole="EMPLEADO" ToRole="TURNOS" />
-          <NavigationProperty Name="USUARIOs" Relationship="Self.FK__USUARIO__salt__74AE54BC" FromRole="EMPLEADO" ToRole="USUARIO" />
+          <NavigationProperty Name="USUARIOs" Relationship="Self.FK__USUARIO__salt__534D60F1" FromRole="EMPLEADO" ToRole="USUARIO" />
           <NavigationProperty Name="FACTURAs" Relationship="Self.FACTURA_EMPLEADO" FromRole="EMPLEADO" ToRole="FACTURA" />
         </EntityType>
         <EntityType Name="FACTURA">
@@ -552,8 +446,19 @@
           <Property Name="VALOR_TOTAL" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="CLIENTE" Relationship="Self.FK__FACTURA__CEDULA___3A81B327" FromRole="FACTURA" ToRole="CLIENTE" />
           <NavigationProperty Name="FORMA_PAGO1" Relationship="Self.FK__FACTURA__FORMA_P__3B75D760" FromRole="FACTURA" ToRole="FORMA_PAGO" />
+          <NavigationProperty Name="FACTURA_SERVICIO" Relationship="Self.FK__FACTURA_S__ID_FA__4222D4EF" FromRole="FACTURA" ToRole="FACTURA_SERVICIO" />
           <NavigationProperty Name="EMPLEADOes" Relationship="Self.FACTURA_EMPLEADO" FromRole="FACTURA" ToRole="EMPLEADO" />
-          <NavigationProperty Name="SERVICIOS" Relationship="Self.FACTURA_SERVICIO" FromRole="FACTURA" ToRole="SERVICIOS" />
+        </EntityType>
+        <EntityType Name="FACTURA_SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_FACTURA" />
+            <PropertyRef Name="ID_SERVICIO" />
+          </Key>
+          <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
+          <Property Name="ID_SERVICIO" Type="Int32" Nullable="false" />
+          <Property Name="CANTIDAD" Type="Int32" />
+          <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA_S__ID_FA__4222D4EF" FromRole="FACTURA_SERVICIO" ToRole="FACTURA" />
+          <NavigationProperty Name="SERVICIO" Relationship="Self.FK__FACTURA_S__ID_SE__4316F928" FromRole="FACTURA_SERVICIO" ToRole="SERVICIOS" />
         </EntityType>
         <EntityType Name="FORMA_PAGO">
           <Key>
@@ -570,29 +475,7 @@
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="pagina_navegar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="USUARIO_PERFIL" Relationship="Self.FK__USUARIO_P__id_pe__787EE5A0" FromRole="PERFIL" ToRole="USUARIO_PERFIL" />
-        </EntityType>
-        <EntityType Name="PRODUCTO">
-          <Key>
-            <PropertyRef Name="ID_PRODUCTO" />
-          </Key>
-          <Property Name="ID_PRODUCTO" Type="Int32" Nullable="false" />
-          <Property Name="DESCRIPCION_PRO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="TIPO_PRO" Type="Int32" />
-          <Property Name="VALOR_PRODUCTO" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="TIPO_PRODUCTO" Relationship="Self.FK__PRODUCTO__TIPO_P__4CA06362" FromRole="PRODUCTO" ToRole="TIPO_PRODUCTO" />
-          <NavigationProperty Name="PROVEEDORES" Relationship="Self.PROVEEDOR_PRODUCTO" FromRole="PRODUCTO" ToRole="PROVEEDORES" />
-        </EntityType>
-        <EntityType Name="PROVEEDORE">
-          <Key>
-            <PropertyRef Name="ID_PROVEEDOR" />
-          </Key>
-          <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" />
-          <Property Name="NOMBRE" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
-          <Property Name="EMAIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="TELEFONO_PROVEEDOR" Relationship="Self.FK__TELEFONO___ID_PR__49C3F6B7" FromRole="PROVEEDORES" ToRole="TELEFONO_PROVEEDOR" />
-          <NavigationProperty Name="PRODUCTOes" Relationship="Self.PROVEEDOR_PRODUCTO" FromRole="PROVEEDORES" ToRole="PRODUCTO" />
+          <NavigationProperty Name="USUARIO_PERFIL" Relationship="Self.FK__USUARIO_P__id_pe__59063A47" FromRole="PERFIL" ToRole="USUARIO_PERFIL" />
         </EntityType>
         <EntityType Name="QUEJA_RECLAMO">
           <Key>
@@ -610,7 +493,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="VALOR" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="FACTURAs" Relationship="Self.FACTURA_SERVICIO" FromRole="SERVICIOS" ToRole="FACTURA" />
+          <NavigationProperty Name="FACTURA_SERVICIO" Relationship="Self.FK__FACTURA_S__ID_SE__4316F928" FromRole="SERVICIOS" ToRole="FACTURA_SERVICIO" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -621,23 +504,6 @@
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="TELEFONO_PROVEEDOR">
-          <Key>
-            <PropertyRef Name="ID_PROVEEDOR" />
-            <PropertyRef Name="TELEFONO" />
-          </Key>
-          <Property Name="ID_PROVEEDOR" Type="Int32" Nullable="false" />
-          <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="PROVEEDORE" Relationship="Self.FK__TELEFONO___ID_PR__49C3F6B7" FromRole="TELEFONO_PROVEEDOR" ToRole="PROVEEDORES" />
-        </EntityType>
-        <EntityType Name="TIPO_PRODUCTO">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PRODUCTOes" Relationship="Self.FK__PRODUCTO__TIPO_P__4CA06362" FromRole="TIPO_PRODUCTO" ToRole="PRODUCTO" />
         </EntityType>
         <EntityType Name="TIPOVEHICULO">
           <Key>
@@ -664,8 +530,8 @@
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="clave" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="salt" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="EMPLEADO" Relationship="Self.FK__USUARIO__salt__74AE54BC" FromRole="USUARIO" ToRole="EMPLEADO" />
-          <NavigationProperty Name="USUARIO_PERFIL" Relationship="Self.FK__USUARIO_P__activ__778AC167" FromRole="USUARIO" ToRole="USUARIO_PERFIL" />
+          <NavigationProperty Name="EMPLEADO" Relationship="Self.FK__USUARIO__salt__534D60F1" FromRole="USUARIO" ToRole="EMPLEADO" />
+          <NavigationProperty Name="USUARIO_PERFIL" Relationship="Self.FK__USUARIO_P__activ__5812160E" FromRole="USUARIO" ToRole="USUARIO_PERFIL" />
         </EntityType>
         <EntityType Name="USUARIO_PERFIL">
           <Key>
@@ -675,8 +541,8 @@
           <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <Property Name="id_perfil" Type="Int32" Nullable="false" />
           <Property Name="activo" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="PERFIL" Relationship="Self.FK__USUARIO_P__id_pe__787EE5A0" FromRole="USUARIO_PERFIL" ToRole="PERFIL" />
-          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO_P__activ__778AC167" FromRole="USUARIO_PERFIL" ToRole="USUARIO" />
+          <NavigationProperty Name="PERFIL" Relationship="Self.FK__USUARIO_P__id_pe__59063A47" FromRole="USUARIO_PERFIL" ToRole="PERFIL" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO_P__activ__5812160E" FromRole="USUARIO_PERFIL" ToRole="USUARIO" />
         </EntityType>
         <EntityType Name="VEHICULO">
           <Key>
@@ -751,7 +617,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__salt__74AE54BC">
+        <Association Name="FK__USUARIO__salt__534D60F1">
           <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -775,7 +641,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO_P__id_pe__787EE5A0">
+        <Association Name="FK__FACTURA_S__ID_FA__4222D4EF">
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="1" />
+          <End Role="FACTURA_SERVICIO" Type="Self.FACTURA_SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACTURA">
+              <PropertyRef Name="ID_FACTURA" />
+            </Principal>
+            <Dependent Role="FACTURA_SERVICIO">
+              <PropertyRef Name="ID_FACTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FACTURA_S__ID_SE__4316F928">
+          <End Role="SERVICIOS" Type="Self.SERVICIO" Multiplicity="1" />
+          <End Role="FACTURA_SERVICIO" Type="Self.FACTURA_SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FACTURA_SERVICIO">
+              <PropertyRef Name="ID_SERVICIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__USUARIO_P__id_pe__59063A47">
           <End Role="PERFIL" Type="Self.PERFIL" Multiplicity="1" />
           <End Role="USUARIO_PERFIL" Type="Self.USUARIO_PERFIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -784,30 +674,6 @@
             </Principal>
             <Dependent Role="USUARIO_PERFIL">
               <PropertyRef Name="id_perfil" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__PRODUCTO__TIPO_P__4CA06362">
-          <End Role="TIPO_PRODUCTO" Type="Self.TIPO_PRODUCTO" Multiplicity="0..1" />
-          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TIPO_PRODUCTO">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PRODUCTO">
-              <PropertyRef Name="TIPO_PRO" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__TELEFONO___ID_PR__49C3F6B7">
-          <End Role="PROVEEDORES" Type="Self.PROVEEDORE" Multiplicity="1" />
-          <End Role="TELEFONO_PROVEEDOR" Type="Self.TELEFONO_PROVEEDOR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PROVEEDORES">
-              <PropertyRef Name="ID_PROVEEDOR" />
-            </Principal>
-            <Dependent Role="TELEFONO_PROVEEDOR">
-              <PropertyRef Name="ID_PROVEEDOR" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -823,7 +689,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO_P__activ__778AC167">
+        <Association Name="FK__USUARIO_P__activ__5812160E">
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
           <End Role="USUARIO_PERFIL" Type="Self.USUARIO_PERFIL" Multiplicity="*" />
           <ReferentialConstraint>
@@ -839,28 +705,17 @@
           <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="*" />
           <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
         </Association>
-        <Association Name="FACTURA_SERVICIO">
-          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
-          <End Role="SERVICIOS" Type="Self.SERVICIO" Multiplicity="*" />
-        </Association>
-        <Association Name="PROVEEDOR_PRODUCTO">
-          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="*" />
-          <End Role="PROVEEDORES" Type="Self.PROVEEDORE" Multiplicity="*" />
-        </Association>
         <EntityContainer Name="LAVADEROEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CARGOS" EntityType="Self.CARGO" />
           <EntitySet Name="CLIENTEs" EntityType="Self.CLIENTE" />
           <EntitySet Name="EMPLEADOes" EntityType="Self.EMPLEADO" />
           <EntitySet Name="FACTURAs" EntityType="Self.FACTURA" />
+          <EntitySet Name="FACTURA_SERVICIO" EntityType="Self.FACTURA_SERVICIO" />
           <EntitySet Name="FORMA_PAGO" EntityType="Self.FORMA_PAGO" />
           <EntitySet Name="PERFILs" EntityType="Self.PERFIL" />
-          <EntitySet Name="PRODUCTOes" EntityType="Self.PRODUCTO" />
-          <EntitySet Name="PROVEEDORES" EntityType="Self.PROVEEDORE" />
           <EntitySet Name="QUEJA_RECLAMO" EntityType="Self.QUEJA_RECLAMO" />
           <EntitySet Name="SERVICIOS" EntityType="Self.SERVICIO" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="TELEFONO_PROVEEDOR" EntityType="Self.TELEFONO_PROVEEDOR" />
-          <EntitySet Name="TIPO_PRODUCTO" EntityType="Self.TIPO_PRODUCTO" />
           <EntitySet Name="TIPOVEHICULOes" EntityType="Self.TIPOVEHICULO" />
           <EntitySet Name="TURNOS" EntityType="Self.TURNO" />
           <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
@@ -886,7 +741,7 @@
             <End Role="TURNOS" EntitySet="TURNOS" />
             <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__salt__74AE54BC" Association="Self.FK__USUARIO__salt__74AE54BC">
+          <AssociationSet Name="FK__USUARIO__salt__534D60F1" Association="Self.FK__USUARIO__salt__534D60F1">
             <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
             <End Role="USUARIO" EntitySet="USUARIOs" />
           </AssociationSet>
@@ -894,23 +749,23 @@
             <End Role="FORMA_PAGO" EntitySet="FORMA_PAGO" />
             <End Role="FACTURA" EntitySet="FACTURAs" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO_P__id_pe__787EE5A0" Association="Self.FK__USUARIO_P__id_pe__787EE5A0">
+          <AssociationSet Name="FK__FACTURA_S__ID_FA__4222D4EF" Association="Self.FK__FACTURA_S__ID_FA__4222D4EF">
+            <End Role="FACTURA" EntitySet="FACTURAs" />
+            <End Role="FACTURA_SERVICIO" EntitySet="FACTURA_SERVICIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FACTURA_S__ID_SE__4316F928" Association="Self.FK__FACTURA_S__ID_SE__4316F928">
+            <End Role="SERVICIOS" EntitySet="SERVICIOS" />
+            <End Role="FACTURA_SERVICIO" EntitySet="FACTURA_SERVICIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__USUARIO_P__id_pe__59063A47" Association="Self.FK__USUARIO_P__id_pe__59063A47">
             <End Role="PERFIL" EntitySet="PERFILs" />
             <End Role="USUARIO_PERFIL" EntitySet="USUARIO_PERFIL" />
-          </AssociationSet>
-          <AssociationSet Name="FK__PRODUCTO__TIPO_P__4CA06362" Association="Self.FK__PRODUCTO__TIPO_P__4CA06362">
-            <End Role="TIPO_PRODUCTO" EntitySet="TIPO_PRODUCTO" />
-            <End Role="PRODUCTO" EntitySet="PRODUCTOes" />
-          </AssociationSet>
-          <AssociationSet Name="FK__TELEFONO___ID_PR__49C3F6B7" Association="Self.FK__TELEFONO___ID_PR__49C3F6B7">
-            <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
-            <End Role="TELEFONO_PROVEEDOR" EntitySet="TELEFONO_PROVEEDOR" />
           </AssociationSet>
           <AssociationSet Name="FK__VEHICULO__TIPO__2C3393D0" Association="Self.FK__VEHICULO__TIPO__2C3393D0">
             <End Role="TIPOVEHICULO" EntitySet="TIPOVEHICULOes" />
             <End Role="VEHICULO" EntitySet="VEHICULOes" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO_P__activ__778AC167" Association="Self.FK__USUARIO_P__activ__778AC167">
+          <AssociationSet Name="FK__USUARIO_P__activ__5812160E" Association="Self.FK__USUARIO_P__activ__5812160E">
             <End Role="USUARIO" EntitySet="USUARIOs" />
             <End Role="USUARIO_PERFIL" EntitySet="USUARIO_PERFIL" />
           </AssociationSet>
@@ -918,14 +773,9 @@
             <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
             <End Role="FACTURA" EntitySet="FACTURAs" />
           </AssociationSet>
-          <AssociationSet Name="FACTURA_SERVICIO" Association="Self.FACTURA_SERVICIO">
-            <End Role="FACTURA" EntitySet="FACTURAs" />
-            <End Role="SERVICIOS" EntitySet="SERVICIOS" />
-          </AssociationSet>
-          <AssociationSet Name="PROVEEDOR_PRODUCTO" Association="Self.PROVEEDOR_PRODUCTO">
-            <End Role="PRODUCTO" EntitySet="PRODUCTOes" />
-            <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
-          </AssociationSet>
+          <FunctionImport Name="CalcularTotalFactura">
+            <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -977,6 +827,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="FACTURA_SERVICIO">
+            <EntityTypeMapping TypeName="LAVADEROModel.FACTURA_SERVICIO">
+              <MappingFragment StoreEntitySet="FACTURA_SERVICIO">
+                <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+                <ScalarProperty Name="ID_SERVICIO" ColumnName="ID_SERVICIO" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="FORMA_PAGO">
             <EntityTypeMapping TypeName="LAVADEROModel.FORMA_PAGO">
               <MappingFragment StoreEntitySet="FORMA_PAGO">
@@ -991,26 +850,6 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="pagina_navegar" ColumnName="pagina_navegar" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PRODUCTOes">
-            <EntityTypeMapping TypeName="LAVADEROModel.PRODUCTO">
-              <MappingFragment StoreEntitySet="PRODUCTO">
-                <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
-                <ScalarProperty Name="DESCRIPCION_PRO" ColumnName="DESCRIPCION_PRO" />
-                <ScalarProperty Name="TIPO_PRO" ColumnName="TIPO_PRO" />
-                <ScalarProperty Name="VALOR_PRODUCTO" ColumnName="VALOR_PRODUCTO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PROVEEDORES">
-            <EntityTypeMapping TypeName="LAVADEROModel.PROVEEDORE">
-              <MappingFragment StoreEntitySet="PROVEEDORES">
-                <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
-                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1040,22 +879,6 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TELEFONO_PROVEEDOR">
-            <EntityTypeMapping TypeName="LAVADEROModel.TELEFONO_PROVEEDOR">
-              <MappingFragment StoreEntitySet="TELEFONO_PROVEEDOR">
-                <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
-                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TIPO_PRODUCTO">
-            <EntityTypeMapping TypeName="LAVADEROModel.TIPO_PRODUCTO">
-              <MappingFragment StoreEntitySet="TIPO_PRODUCTO">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1114,22 +937,7 @@
               <ScalarProperty Name="ID_FACTURA" ColumnName="FACTURA" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="FACTURA_SERVICIO" TypeName="LAVADEROModel.FACTURA_SERVICIO" StoreEntitySet="FACTURA_SERVICIO">
-            <EndProperty Name="FACTURA">
-              <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
-            </EndProperty>
-            <EndProperty Name="SERVICIOS">
-              <ScalarProperty Name="ID" ColumnName="ID_SERVICIO" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="PROVEEDOR_PRODUCTO" TypeName="LAVADEROModel.PROVEEDOR_PRODUCTO" StoreEntitySet="PROVEEDOR_PRODUCTO">
-            <EndProperty Name="PRODUCTO">
-              <ScalarProperty Name="ID_PRODUCTO" ColumnName="PRODUCTO" />
-            </EndProperty>
-            <EndProperty Name="PROVEEDORES">
-              <ScalarProperty Name="ID_PROVEEDOR" ColumnName="PROVEEDOR" />
-            </EndProperty>
-          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="CalcularTotalFactura" FunctionName="LAVADEROModel.Store.CalcularTotalFactura" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1147,7 +955,7 @@
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
