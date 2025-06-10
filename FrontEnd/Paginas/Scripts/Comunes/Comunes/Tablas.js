@@ -33,6 +33,7 @@
 
         //Llena los datos
         $(TablaLlenar).DataTable({
+            scrollX: true,
             data: Rpta,
             columns: Columnas,
             destroy: true
