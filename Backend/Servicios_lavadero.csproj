@@ -246,65 +246,71 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CARGO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CLIENTE.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBlavadero.Context.cs">
+    <Compile Include="Models\DBLavadero.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBlavadero.Context.tt</DependentUpon>
+      <DependentUpon>DBLavadero.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DBlavadero.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="Models\DBLavadero.cs">
+      <DependentUpon>DBLavadero.tt</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Models\DBlavadero.Designer.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="Models\DBLavadero.Designer.cs">
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBlavadero.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DBLavadero.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DTOs\FacturasConServiciosDTO.cs" />
     <Compile Include="Models\EMPLEADO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FACTURA.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FACTURA_SERVICIO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FORMA_PAGO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PERFIL.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QUEJA_RECLAMO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SERVICIO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DBLavadero.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TIPOVEHICULO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TURNO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USUARIO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USUARIO_PERFIL.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VEHICULO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
+      <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -328,15 +334,18 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Models\DBlavadero.Context.tt">
+    <Content Include="Models\DBLavadero.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBlavadero.edmx</DependentUpon>
-      <LastGenOutput>DBlavadero.Context.cs</LastGenOutput>
+      <DependentUpon>DBLavadero.edmx</DependentUpon>
+      <LastGenOutput>DBLavadero.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\DBlavadero.tt">
+    <Content Include="Models\DBLavadero.edmx.diagram">
+      <DependentUpon>DBLavadero.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DBLavadero.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBlavadero.edmx</DependentUpon>
-      <LastGenOutput>DBlavadero.cs</LastGenOutput>
+      <LastGenOutput>DBLavadero.cs</LastGenOutput>
+      <DependentUpon>DBLavadero.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -363,13 +372,10 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\DBlavadero.edmx">
+    <EntityDeploy Include="Models\DBLavadero.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBlavadero.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBLavadero.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\DBlavadero.edmx.diagram">
-      <DependentUpon>DBlavadero.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

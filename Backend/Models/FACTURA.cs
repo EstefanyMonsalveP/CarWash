@@ -19,7 +19,6 @@ namespace Servicios_lavadero.Models
         public FACTURA()
         {
             this.FACTURA_SERVICIO = new HashSet<FACTURA_SERVICIO>();
-            this.EMPLEADOes = new HashSet<EMPLEADO>();
         }
     
         public int ID_FACTURA { get; set; }
@@ -28,16 +27,17 @@ namespace Servicios_lavadero.Models
         public string FORMA_PAGO { get; set; }
         public Nullable<decimal> VALOR_TOTAL { get; set; }
         public string EMPLEADO_ATENCION { get; set; }
-
         [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
         [JsonIgnore]
+
+        public virtual EMPLEADO EMPLEADO { get; set; }
+        [JsonIgnore]
+
         public virtual FORMA_PAGO FORMA_PAGO1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         [JsonIgnore]
+
         public virtual ICollection<FACTURA_SERVICIO> FACTURA_SERVICIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
-        public virtual ICollection<EMPLEADO> EMPLEADOes { get; set; }
     }
 }

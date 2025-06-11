@@ -10,15 +10,13 @@
 namespace Servicios_lavadero.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class FACTURA_SERVICIO
+    public partial class sp_helpdiagrams_Result
     {
-        public int ID_FACTURA { get; set; }
-        public int ID_SERVICIO { get; set; }
-        public Nullable<int> CANTIDAD { get; set; }
-    
-        public virtual FACTURA FACTURA { get; set; }
-        public virtual SERVICIO SERVICIO { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

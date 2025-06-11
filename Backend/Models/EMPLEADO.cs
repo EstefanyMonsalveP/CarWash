@@ -17,8 +17,8 @@ namespace Servicios_lavadero.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public EMPLEADO()
         {
-            this.USUARIOs = new HashSet<USUARIO>();
             this.FACTURAs = new HashSet<FACTURA>();
+            this.USUARIOs = new HashSet<USUARIO>();
         }
     
         public string CEDULA { get; set; }
@@ -32,8 +32,8 @@ namespace Servicios_lavadero.Models
         public virtual CARGO CARGO1 { get; set; }
         public virtual TURNO TURNO1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIO> USUARIOs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA> FACTURAs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<USUARIO> USUARIOs { get; set; }
     }
 }
