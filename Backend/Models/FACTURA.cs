@@ -9,6 +9,7 @@
 
 namespace Servicios_lavadero.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -26,12 +27,14 @@ namespace Servicios_lavadero.Models
         public string CEDULA_CLIENTE { get; set; }
         public string FORMA_PAGO { get; set; }
         public Nullable<decimal> VALOR_TOTAL { get; set; }
-    
+
+        [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
         public virtual FORMA_PAGO FORMA_PAGO1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA_SERVICIO> FACTURA_SERVICIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<EMPLEADO> EMPLEADOes { get; set; }
     }
 }

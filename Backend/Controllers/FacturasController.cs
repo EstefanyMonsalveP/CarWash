@@ -1,5 +1,6 @@
 ﻿using Servicios_lavadero.Clases;
 using Servicios_lavadero.Models;
+using Servicios_lavadero.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +27,12 @@ namespace Servicios_lavadero.Controllers
             return _clsFactura.Facturas();
         }
 
-        public string Post([FromBody]FacturaConServiciosDTO)
+        //POST api/<controller>
+        public string Post([FromBody]  FacturasConServiciosDTO dto)
         {
             clsFactura _clsFactura = new clsFactura();
-            
+            _clsFactura._factura = dto.Factura;// Se pasa la factura a la clase
+            return _clsFactura.AgregarFactura(dto.Servicios); //Se pasan los servicios al metodo
         }
     }
 }

@@ -27,8 +27,7 @@ namespace Servicios_lavadero.Clases
                 FACTURA_SERVICIO datosFacturaServicio = new FACTURA_SERVICIO
                 {
                     ID_FACTURA = id,
-                    ID_SERVICIO = servicio.ID_SERVICIO,
-                    
+                    ID_SERVICIO = servicio.ID_SERVICIO,     
                 };
 
                 //Agregar a la tabla factura

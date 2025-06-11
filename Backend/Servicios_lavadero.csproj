@@ -224,6 +224,7 @@
     <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Clases\ClsCypher.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
+    <Compile Include="Clases\clsFactura.cs" />
     <Compile Include="Clases\ClsPerfil.cs" />
     <Compile Include="Clases\ClsProducto.cs" />
     <Compile Include="Clases\clsProveedor.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Controllers\CargosController.cs" />
     <Compile Include="Controllers\clientesController.cs" />
     <Compile Include="Controllers\empleadosController.cs" />
+    <Compile Include="Controllers\FacturasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PerfilesController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
@@ -271,22 +273,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBlavadero.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\DTOs\FacturasConServiciosDTO.cs" />
     <Compile Include="Models\EMPLEADO.cs">
       <DependentUpon>DBlavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FACTURA.cs">
       <DependentUpon>DBlavadero.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FACTURA_SERVICIO.cs">
+      <DependentUpon>DBlavadero.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\FORMA_PAGO.cs">
       <DependentUpon>DBlavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PERFIL.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PRODUCTO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PROVEEDORE.cs">
       <DependentUpon>DBlavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\QUEJA_RECLAMO.cs">
@@ -298,13 +298,7 @@
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>DBlavadero.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\TELEFONO_PROVEEDOR.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\TIPOVEHICULO.cs">
-      <DependentUpon>DBlavadero.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TIPO_PRODUCTO.cs">
       <DependentUpon>DBlavadero.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TURNO.cs">
