@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LAVADEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LAVADEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CARGOS">
           <Key>
             <PropertyRef Name="ID" />
@@ -60,7 +60,6 @@
           </Key>
           <Property Name="ID_FACTURA" Type="int" Nullable="false" />
           <Property Name="ID_SERVICIO" Type="int" Nullable="false" />
-          <Property Name="CANTIDAD" Type="int" />
         </EntityType>
         <EntityType Name="FORMA_PAGO">
           <Key>
@@ -392,8 +391,7 @@
             <End Role="VEHICULO" EntitySet="VEHICULO" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LAVADEROModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -456,7 +454,6 @@
           </Key>
           <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
           <Property Name="ID_SERVICIO" Type="Int32" Nullable="false" />
-          <Property Name="CANTIDAD" Type="Int32" />
           <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA_S__ID_FA__4222D4EF" FromRole="FACTURA_SERVICIO" ToRole="FACTURA" />
           <NavigationProperty Name="SERVICIO" Relationship="Self.FK__FACTURA_S__ID_SE__4316F928" FromRole="FACTURA_SERVICIO" ToRole="SERVICIOS" />
         </EntityType>
@@ -774,7 +771,7 @@
             <End Role="FACTURA" EntitySet="FACTURAs" />
           </AssociationSet>
           <FunctionImport Name="CalcularTotalFactura">
-            <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
+          <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
       </Schema>
@@ -832,7 +829,6 @@
               <MappingFragment StoreEntitySet="FACTURA_SERVICIO">
                 <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
                 <ScalarProperty Name="ID_SERVICIO" ColumnName="ID_SERVICIO" />
-                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

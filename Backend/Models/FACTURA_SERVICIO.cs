@@ -16,7 +16,6 @@ namespace Servicios_lavadero.Models
     {
         public int ID_FACTURA { get; set; }
         public int ID_SERVICIO { get; set; }
-        public Nullable<int> CANTIDAD { get; set; }
     
         public virtual FACTURA FACTURA { get; set; }
         public virtual SERVICIO SERVICIO { get; set; }

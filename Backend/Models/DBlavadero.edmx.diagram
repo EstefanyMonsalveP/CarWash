@@ -33,6 +33,7 @@
         <AssociationConnector Association="LAVADEROModel.FK__VEHICULO__TIPO__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__USUARIO_P__activ__5812160E" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FACTURA_EMPLEADO" ManuallyRouted="false" />
+        <AssociationConnector Association="LAVADEROModel.FK__FACTURA__EMPLEAD__6EF57B66" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
