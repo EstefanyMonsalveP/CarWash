@@ -2,6 +2,7 @@
     //Registrar los botones para responder al evento click
     $("#dvMenu").load("Menu.html");
     LlenarComboCliente();
+    LlenarComboServicio();
     LlenarComboEmpleados()
     LlenarTablaFactura();
     let today = new Date().toISOString()
@@ -21,10 +22,12 @@
         event.preventDefault();
         Consultar();
     });
+
+    
 });
 
 async function LlenarComboServicio() {
-    LlenarComboXServicios()
+    LlenarComboXServicios("https://localhost:44367/api/Servicios", "#cboServicios")
 }
 
 async function LlenarComboEmpleados() {
