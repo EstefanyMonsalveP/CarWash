@@ -271,6 +271,7 @@
       <DependentUpon>DBLavadero.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DTOs\FacturasConServiciosDTO.cs" />
+    <Compile Include="Models\DTOs\FacturaYServiciosVistaDTO.cs" />
     <Compile Include="Models\EMPLEADO.cs">
       <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
