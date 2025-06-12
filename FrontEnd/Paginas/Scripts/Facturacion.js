@@ -4,6 +4,7 @@
     LlenarComboCliente();
     LlenarComboServicio();
     LlenarComboEmpleados()
+    LlenarComboMetodoPago();
     LlenarTablaFactura();
     let today = new Date().toISOString()
     $('#txtFecha').val(today);
@@ -56,6 +57,10 @@ async function AñadirServicio() {
         .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
 
     $('#listaServicios').append($div);
+}
+
+async function LlenarComboMetodoPago() {
+    LlenarComboXServicios("https://localhost:44367/api/FormasPago", "#cboMetodoPago");
 }
 
 //Elimina el servicio de la factura

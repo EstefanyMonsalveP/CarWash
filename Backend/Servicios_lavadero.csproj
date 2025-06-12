@@ -225,6 +225,7 @@
     <Compile Include="Clases\ClsCypher.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
     <Compile Include="Clases\clsFactura.cs" />
+    <Compile Include="Clases\clsFormaPago.cs" />
     <Compile Include="Clases\ClsPerfil.cs" />
     <Compile Include="Clases\clsQueja_Reclamo.cs" />
     <Compile Include="Clases\clsServicio.cs" />
@@ -236,6 +237,7 @@
     <Compile Include="Controllers\clientesController.cs" />
     <Compile Include="Controllers\empleadosController.cs" />
     <Compile Include="Controllers\FacturasController.cs" />
+    <Compile Include="Controllers\FormasPagoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PerfilesController.cs" />
     <Compile Include="Controllers\Queja_ReclamosController.cs" />
