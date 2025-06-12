@@ -13,6 +13,21 @@
     <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
     <script src="../Paginas/Css/EstilosTabla.css"></script>
 </head>
+<style>
+    .servicio {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+        .servicio:hover {
+            background-color: #f0f0f0;
+        }
+
+    .seleccionado {
+        background-color: #ffdddd;
+        font-weight: bold;
+    }
+</style>
 <body class="hold-transition sidebar-mini">
     <section class="content">
         <div class="container-fluid">
@@ -76,7 +91,7 @@
                                             </div>
                                             <div class="col-md-7">
                                                 <div class="form-group">
-                                                    <textarea class="form-control" id="txtServicesSelected" rows="10" cols="100" ></textarea>
+                                                    <div id="listaServicios" class="form-control" style="min-height: 120px;"></div>
                                                 </div>
                                             </div>
                                         </div>

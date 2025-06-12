@@ -27,29 +27,44 @@
         event.preventDefault();
         AñadirServicio();
     })
+
+    $("#btnRetirar").on("click", function (event) {
+        event.preventDefault();
+        RetirarServicio();
+    })
     
 });
 
 async function AñadirServicio() {
-    //Captura el valor del servicio 
-    const $select = $("#cboServicios");
+    
+    const $select = $("#cboServicios");//Captura el cbo
     const value = $select.val(); //captura el value
-    const descripcion = $select.find('option:selected').text()
+    const descripcion = $select.find('option:selected').text() //Captura la opcion asociada al value
+    const servicio = `${value} - ${descripcion}`; //Une el value y la opcion
+    const $div = $('<div></div>') //Crea un div
+        .addClass('servicio')//Agrega la clase 
+        .text(servicio) //Agrega el texto en la variable del servicio
+        .attr('data-id', value); //Crea el atributo para capturar los datos
 
-    //Captura el txtArea
-    let serviciosSeleccionados = $("#txtServicesSelected");
+    $('#listaServicios').append($div);
+}
 
-    const servicio = `${value} - ${descripcion}`;
+async function RetirarServicio() {
+    //Captura el valor del servicio 
+    let $textArea = $("#txtServicesSelected");
 
-    //Captura el valor actual del txtArea
-    let textoActual = serviciosSeleccionados.val();
+    const fullText = $textArea.val();
 
-    //Agrega el nuevo servicio
-    let nuevoTexto = textoActual ? textoActual + ";"+ '\n' + servicio : servicio;
+    const inicio = $textArea[0].selectionStart;
+    const fin = $textArea[0].selectionEnd;
 
+    if (inicio === fin) return; // nada seleccionado
 
-
-    serviciosSeleccionados.val(nuevoTexto);
+    // Eliminar el texto seleccionado
+    const antes = fullText.substring(0, inicio);
+    const despues = fullText.substring(fin);
+    const actualizar = (antes + despues).trim();
+    $textArea.val(actualizar);
 }
 
 async function LlenarComboServicio() {
