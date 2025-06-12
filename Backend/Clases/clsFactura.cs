@@ -36,10 +36,6 @@ namespace Servicios_lavadero.Clases
             }
             dbLavadero.SaveChanges();
 
-
-            //Llamar el procedimiento almacenado para realizar la sumatoria de los servicios
-            dbLavadero.CalcularTotalFactura(id);
-
             return "Se genero correctamente la factura";
         }
 

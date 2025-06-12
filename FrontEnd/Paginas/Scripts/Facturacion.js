@@ -9,21 +9,6 @@
     
     let today = new Date().toISOString()
     $('#txtFecha').val(today);
-    $("#btnInsertar").on("click", function () {
-        EjecutarComando("POST");
-    });
-    $("#btnActualizar").on("click", function () {
-        EjecutarComando("PUT");
-    });
-
-    $("#btnEliminar").on("click", function () {
-        EjecutarComando("DELETE");
-    });
-
-    $("#btnBuscar").on("click", function (event) {
-        event.preventDefault();
-        Consultar();
-    });
 
     $("#btnAñadir").on("click", function (event) {
         event.preventDefault();
@@ -41,46 +26,27 @@
         RetirarServicio();
     })
 
+    $("#btnInsertar").on("click", function () {
+        EjecutarComando("POST");
+    });
+    $("#btnActualizar").on("click", function () {
+        EjecutarComando("PUT");
+    });
+
+    $("#btnEliminar").on("click", function () {
+        EjecutarComando("DELETE");
+    });
+
+    $("#btnBuscar").on("click", function (event) {
+        event.preventDefault();
+        Consultar();
+    });
+
 });
 
-//Añade el servicio a la factura
-async function AñadirServicio() {
-    
-    const $select = $("#cboServicios");//Captura el cbo
-    const value = $select.val(); //captura el value
-    const descripcion = $select.find('option:selected').text() //Captura la opcion asociada al value
-    const cantidad = $("#numCantidad").val();
-    const servicio = `${value} - ${descripcion} - CANT: ${cantidad}`; //Une el value y la opcion
-    const $div = $('<div></div>') //Crea un div
-        .addClass('servicio')//Agrega la clase 
-        .text(servicio) //Agrega el texto en la variable del servicio
-        .attr('data-id', value) //Crea el atributo para capturar el id 
-        .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
-
-    $('#listaServicios').append($div);
-
-    ValorApagar();
-}
-async function ValorApagar() {
-    let acumulador = 0;
+async function LlenarComboCliente() {
     try {
-        $("#listaServicios .servicio").each(function () {
-            const cantidad = parseInt($(this).attr("data-cantidad"));
-            const precio = parseInt($(this).attr("data-precio"));
-            let valorTotal = cantidad * precio;
-            acumulador += valorTotal;
-        })
-        return acumulador;
-
-        $("#numValorTotal").val(acumulador);
-    }catch (error) {
-        $("#dvMensaje").html(error);
-    }
-    
-}
-async function LlenarComboMetodoPago() {
-    try {
-        const Respuesta = await fetch("https://localhost:44367/api/FormasPago",
+        const Respuesta = await fetch("https://localhost:44367/api/clientes",
             {
                 method: "GET",
                 mode: "cors",
@@ -90,21 +56,16 @@ async function LlenarComboMetodoPago() {
             });
         const Rpta = await Respuesta.json();
         //Se debe limpiar el combo
-        $("#cboMetodoPago").empty();
+        $("#cboClientes").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboMetodoPago").append('<option value=' + Rpta[i].ID_PAGO + '>' + Rpta[i].DESCRIPCION_PAGO + '</option>');
+            $("#cboClientes").append('<option value=' + Rpta[i].DOCUMENTO + '>' + Rpta[i].DOCUMENTO + "-" + Rpta[i].NOMBRE + " " + Rpta[i].APELLIDO + '</option>');
         }
-    } catch (error) {
+    }
+    catch (error) {
         //Se presenta la respuesta en el div mensaje
         $("#dvMensaje").html(error);
     }
-}
-
-//Elimina el servicio de la factura
-async function RetirarServicio() {
-    $('.servicio.seleccionado').remove()
-    ValorApagar();
 }
 
 async function LlenarComboServicio() {
@@ -121,11 +82,11 @@ async function LlenarComboServicio() {
         //Se debe limpiar el combo
         $("#cboServicios").empty();
         //Se recorre en un ciclo para llenar el select con la información
-        for (i = 0; i < Rpta.length; i++) {
-            $("#cboServicios").append('<option value=' + Rpta[i].ID + '" data-precio="' + Rpta[i].VALOR + '>' + Rpta[i].DESCRIPCION + " - " + "VAL.UNIDAD: $ "+Rpta[i].VALOR + '</option>');
+        for (let i = 0; i < Rpta.length; i++) {
+            $("#cboServicios").append('<option value="' + Rpta[i].ID + '" data-precio="' + Rpta[i].VALOR + '">' + Rpta[i].DESCRIPCION + " - " + "VAL.UNIDAD: $ " + Rpta[i].VALOR + '</option>');
         }
     } catch (error) {
-    //Se presenta la respuesta en el div mensaje
+        //Se presenta la respuesta en el div mensaje
         $("#dvMensaje").html(error);
     }
 }
@@ -154,9 +115,9 @@ async function LlenarComboEmpleados() {
     }
 }
 
-async function LlenarComboCliente() {
+async function LlenarComboMetodoPago() {
     try {
-        const Respuesta = await fetch("https://localhost:44367/api/clientes",
+        const Respuesta = await fetch("https://localhost:44367/api/FormasPago",
             {
                 method: "GET",
                 mode: "cors",
@@ -166,13 +127,12 @@ async function LlenarComboCliente() {
             });
         const Rpta = await Respuesta.json();
         //Se debe limpiar el combo
-        $("#cboClientes").empty();
+        $("#cboMetodoPago").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboClientes").append('<option value=' + Rpta[i].DOCUMENTO + '>' + Rpta[i].DOCUMENTO + "-" + Rpta[i].NOMBRE + " " + Rpta[i].APELLIDO +'</option>');
+            $("#cboMetodoPago").append('<option value=' + Rpta[i].ID_PAGO + '>' + Rpta[i].DESCRIPCION_PAGO + '</option>');
         }
-    }
-    catch (error) {
+    } catch (error) {
         //Se presenta la respuesta en el div mensaje
         $("#dvMensaje").html(error);
     }
@@ -180,6 +140,49 @@ async function LlenarComboCliente() {
 
 async function LlenarTablaFactura() {
     LlenarTablaXServicios("https://localhost:44367/api/Facturas", "#tblFactura");
+}
+
+//Añade el servicio a la factura
+async function AñadirServicio() {
+    
+    const $select = $("#cboServicios");//Captura el cbo
+    const value = $select.val(); //captura el value
+    const descripcion = $select.find('option:selected').text() //Captura la opcion asociada al value
+    const cantidad = $("#numCantidad").val();
+    const servicio = `${value} - ${descripcion} - CANT: ${cantidad}`; //Une el value y la opcion
+    const $div = $('<div></div>') //Crea un div
+        .addClass('servicio')//Agrega la clase 
+        .text(servicio) //Agrega el texto en la variable del servicio
+        .attr('data-id', value) //Crea el atributo para capturar el id 
+        .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
+
+    $('#listaServicios').append($div);
+
+    ValorApagar();
+}
+
+//Elimina el servicio de la factura
+async function RetirarServicio() {
+    $('.servicio.seleccionado').remove()
+    ValorApagar();
+}
+
+async function ValorApagar() {
+    let acumulador = 0;
+    try {
+        $("#listaServicios .servicio").each(function () {
+            const cantidad = parseInt($(this).attr("data-cantidad"));
+            const precio = parseInt($(this).attr("data-precio"));
+            let valorTotal = cantidad * precio;
+            acumulador += valorTotal;
+        })
+        return acumulador;
+
+        $("#numValorTotal").val(acumulador);
+    }catch (error) {
+        $("#dvMensaje").html(error);
+    }
+    
 }
 
 async function Consultar() {
@@ -203,7 +206,7 @@ async function Consultar() {
     }
 }
 
-
+//Ejecuta los comandos PUT, POST, GET 
 async function EjecutarComando(comando) {
     /*Se capturan los datos de entrada del formulario HTML. Los valores de los campos del formulario se obtienen utilizando
     jQuery y se asignan a variables locales.*/
