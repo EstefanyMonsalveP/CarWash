@@ -28,13 +28,21 @@
         AñadirServicio();
     })
 
+    //Remueve la clase seleccionado de todos los servicios y se agrega unicamente al seleccionado
+    $("#listaServicios").on("click", ".servicio", function () {
+        $(".servicio").removeClass("seleccionado");
+        $(this).addClass("seleccionado");
+    })
+
+    
     $("#btnRetirar").on("click", function (event) {
         event.preventDefault();
         RetirarServicio();
     })
-    
+
 });
 
+//Añade el servicio a la factura
 async function AñadirServicio() {
     
     const $select = $("#cboServicios");//Captura el cbo
@@ -49,22 +57,9 @@ async function AñadirServicio() {
     $('#listaServicios').append($div);
 }
 
+//Elimina el servicio de la factura
 async function RetirarServicio() {
-    //Captura el valor del servicio 
-    let $textArea = $("#txtServicesSelected");
-
-    const fullText = $textArea.val();
-
-    const inicio = $textArea[0].selectionStart;
-    const fin = $textArea[0].selectionEnd;
-
-    if (inicio === fin) return; // nada seleccionado
-
-    // Eliminar el texto seleccionado
-    const antes = fullText.substring(0, inicio);
-    const despues = fullText.substring(fin);
-    const actualizar = (antes + despues).trim();
-    $textArea.val(actualizar);
+    $('.servicio.seleccionado').remove()
 }
 
 async function LlenarComboServicio() {
