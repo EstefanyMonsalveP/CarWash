@@ -29,14 +29,7 @@
     $("#btnInsertar").on("click", function () {
         EjecutarComando("POST");
     });
-    $("#btnActualizar").on("click", function () {
-        EjecutarComando("PUT");
-    });
-
-    $("#btnEliminar").on("click", function () {
-        EjecutarComando("DELETE");
-    });
-
+    
     $("#btnBuscar").on("click", function (event) {
         event.preventDefault();
         Consultar();

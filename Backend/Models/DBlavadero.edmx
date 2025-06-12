@@ -147,8 +147,8 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
           <Property Name="ID_FACTURA" Type="int" Nullable="false" />
           <Property Name="FECHA" Type="date" />
           <Property Name="CEDULA_CLIENTE" Type="varchar" MaxLength="57" />
+          <Property Name="SERVICIOS" Type="varchar" MaxLength="8000" />
           <Property Name="FORMA_PAGO" Type="varchar" MaxLength="20" />
-          <Property Name="SERVICIOS" Type="varchar" MaxLength="145" />
           <Property Name="VALOR_TOTAL" Type="money" />
           <Property Name="EMPLEADO_ATENCION" Type="varchar" MaxLength="55" />
         </EntityType>
@@ -365,8 +365,8 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
     [VistaFacturaServicios].[ID_FACTURA] AS [ID_FACTURA], 
     [VistaFacturaServicios].[FECHA] AS [FECHA], 
     [VistaFacturaServicios].[CEDULA_CLIENTE] AS [CEDULA_CLIENTE], 
-    [VistaFacturaServicios].[FORMA_PAGO] AS [FORMA_PAGO], 
     [VistaFacturaServicios].[SERVICIOS] AS [SERVICIOS], 
+    [VistaFacturaServicios].[FORMA_PAGO] AS [FORMA_PAGO], 
     [VistaFacturaServicios].[VALOR_TOTAL] AS [VALOR_TOTAL], 
     [VistaFacturaServicios].[EMPLEADO_ATENCION] AS [EMPLEADO_ATENCION]
     FROM [dbo].[VistaFacturaServicios] AS [VistaFacturaServicios]</DefiningQuery>
@@ -867,7 +867,7 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
           <Property Name="FECHA" Type="DateTime" Precision="0" />
           <Property Name="CEDULA_CLIENTE" Type="String" MaxLength="57" FixedLength="false" Unicode="false" />
           <Property Name="FORMA_PAGO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="SERVICIOS" Type="String" MaxLength="145" FixedLength="false" Unicode="false" />
+          <Property Name="SERVICIOS" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
           <Property Name="VALOR_TOTAL" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="EMPLEADO_ATENCION" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
         </EntityType>
