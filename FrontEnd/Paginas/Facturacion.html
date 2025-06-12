@@ -36,7 +36,7 @@
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="txtFactura">ID FACTURA</label>
-                                                    <input type="number" class="form-control" id="txtFactura" placeholder="Documento del cliente">
+                                                    <input type="number" class="form-control" id="txtFactura" >
                                                 </div>
                                             </div>
                                             <div class="col-md-1">
@@ -47,13 +47,13 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="txtFecha">FECHA</label>
-                                                    <input type="datetime-local" class="form-control" id="txtFecha" readonly>
+                                                    <input type="text" class="form-control" id="txtFecha" readonly>
                                                 </div>
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="form-group">
-                                                    <label for="cboCliente">CLIENTE</label>
-                                                    <select id="cboCliente" class="form-control">
+                                                    <label for="cboClientes">CLIENTE</label>
+                                                    <select id="cboClientes" class="form-control">
                                                         <option value"0">SELECCIONAR</option>
                                                     </select>
                                                 </div>
@@ -83,8 +83,8 @@
                                         <div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="cboEmpleado">EMPLEADO</label>
-                                                    <select id="cboEmpleado" class="form-control">
+                                                    <label for="cboEmpleados">EMPLEADO</label>
+                                                    <select id="cboEmpleados" class="form-control">
                                                         <option value"0">SELECCIONAR</option>
                                                     </select>
                                                 </div>
@@ -106,7 +106,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12 table-responsive">
-                                                    <table id="tblClientes" class="table table-bordered table-striped" style="width:100%">
+                                                    <table id="tblFactura" class="table table-bordered table-striped" style="width:100%">
                                                         <thead>
                                                             <tr>
                                                                 <th>ID FACTURA</th>
@@ -141,6 +141,6 @@
     <script src="Scripts/Comunes/Comunes/Combos.js"></script>
     <script src="Scripts/Comunes/Comunes/Tablas.js"></script>
     <!--Archivos de la página-->
-    <script src="Scripts/.js"></script>
+    <script src="Scripts/Facturacion.js"></script>
 </body>
 </html>
