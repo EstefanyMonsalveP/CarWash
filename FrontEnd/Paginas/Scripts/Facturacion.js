@@ -147,14 +147,17 @@ async function AñadirServicio() {
     
     const $select = $("#cboServicios");//Captura el cbo
     const value = $select.val(); //captura el value
-    const descripcion = $select.find('option:selected').text() //Captura la opcion asociada al value
+    const $option = $select.find('option:selected')
+    const descripcion = $option.text() //Captura la opcion asociada al value
     const cantidad = $("#numCantidad").val();
-    const servicio = `${value} - ${descripcion} - CANT: ${cantidad}`; //Une el value y la opcion
+    const precio = $option.data('precio'); 
+    const servicio = `${value} - ${descripcion} - CANT: ${cantidad} - VALOR_UNIDAD: ${precio}`; //Une el value y la opcion
     const $div = $('<div></div>') //Crea un div
         .addClass('servicio')//Agrega la clase 
         .text(servicio) //Agrega el texto en la variable del servicio
         .attr('data-id', value) //Crea el atributo para capturar el id 
-        .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
+        .attr('data-cantidad', cantidad)//Crea el atributo para capturar la cantidad 
+        .attr('data-precio', precio);//Crea el atributo para capturar el precio
 
     $('#listaServicios').append($div);
 
@@ -176,9 +179,8 @@ async function ValorApagar() {
             let valorTotal = cantidad * precio;
             acumulador += valorTotal;
         })
-        return acumulador;
-
         $("#numValorTotal").val(acumulador);
+        return acumulador;   
     }catch (error) {
         $("#dvMensaje").html(error);
     }
