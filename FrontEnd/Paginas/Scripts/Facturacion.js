@@ -59,7 +59,7 @@ async function AñadirServicio() {
     $('#listaServicios').append($div);
     console.log($('#listaServicios'))
 }
-async function valorApagar() {
+async function ValorApagar() {
     let acumulador = 0;
     try {
         $("#listaServicios .servicio").each(function () {
@@ -117,7 +117,7 @@ async function LlenarComboServicio() {
         $("#cboServicios").empty();
         //Se recorre en un ciclo para llenar el select con la información
         for (i = 0; i < Rpta.length; i++) {
-            $("#cboServicios").append('<option value=' + Rpta[i].ID + '>' + Rpta[i].DESCRIPCION + " - " + "VAL.UNIDAD: $ "+Rpta[i].VALOR + '</option>');
+            $("#cboServicios").append('<option value=' + Rpta[i].ID + '" data-precio="' + Rpta[i].VALOR + '>' + Rpta[i].DESCRIPCION + " - " + "VAL.UNIDAD: $ "+Rpta[i].VALOR + '</option>');
         }
     } catch (error) {
     //Se presenta la respuesta en el div mensaje
