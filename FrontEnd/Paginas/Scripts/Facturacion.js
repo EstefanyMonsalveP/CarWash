@@ -6,6 +6,7 @@
     LlenarComboEmpleados()
     LlenarComboMetodoPago();
     LlenarTablaFactura();
+    
     let today = new Date().toISOString()
     $('#txtFecha').val(today);
     $("#btnInsertar").on("click", function () {
@@ -27,6 +28,7 @@
     $("#btnAñadir").on("click", function (event) {
         event.preventDefault();
         AñadirServicio();
+        ValorApagar();
     })
 
     //Remueve la clase seleccionado de todos los servicios y se agrega unicamente al seleccionado
@@ -57,7 +59,6 @@ async function AñadirServicio() {
         .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
 
     $('#listaServicios').append($div);
-    console.log($('#listaServicios'))
 }
 async function ValorApagar() {
     let acumulador = 0;
