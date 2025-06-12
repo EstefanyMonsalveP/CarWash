@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FACTURACION</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="Estilos/css/all.min.css" rel="stylesheet" />
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!--Estilos para las tablas-->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="../Paginas/Css/EstilosTabla.css"></script>
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12" id="dvMenu">
+                </div>
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">REGISTRO DE FACTURAS</h3>
+                        </div>
+                        <form id="frmFacturas">
+                            <div class="card-body">
+                                <div class="card card-gray-dark">
+                                    <div class="card-header">
+                                        <h3 class="card-title">DATOS ENTRADA</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label for="txtFactura">ID FACTURA</label>
+                                                    <input type="number" class="form-control" id="txtFactura" placeholder="Documento del cliente">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button id="btnBuscar" class="btn btn-link p-0" style="border: none; background: none;">
+                                                    <img src="../Imagenes/Buscar.jpg" alt="Buscar" style="width: 75px; height: 75px;" />
+                                                </button>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtFecha">FECHA</label>
+                                                    <input type="datetime-local" class="form-control" id="txtFecha" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label for="cboCliente">CLIENTE</label>
+                                                    <select id="cboCliente" class="form-control">
+                                                        <option value"0">SELECCIONAR</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="cboServicios">SERVICIO</label>
+                                                    <select id="cboServicios" class="form-control">
+                                                        <option value"0">SELECCIONAR</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1" style="margin-top:2.7%">
+                                                <div class="form-group">
+                                                    <button type="button" class="btn-block btn-sm btn-success">+</button>
+                                                    <button type="button" class="btn-block btn-sm btn-danger">-</button>
+                                                </div>  
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="txtServicesSelected" rows="10" cols="100" ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="cboEmpleado">EMPLEADO</label>
+                                                    <select id="cboEmpleado" class="form-control">
+                                                        <option value"0">SELECCIONAR</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <br />
+                                                    <button type="button" id="btnInsertar" class="btn-block btn-lg btn-secondary">INSERTAR</button>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <br />
+                                                    <button type="button" id="btnActualizar" class="btn-block btn-lg btn-secondary">ACTUALIZAR</button>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <br />
+                                                    <button type="button" id="btnEliminar" class="btn-block btn-lg btn-secondary">ELIMINAR</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 table-responsive">
+                                                    <table id="tblClientes" class="table table-bordered table-striped" style="width:100%">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>ID FACTURA</th>
+                                                                <th>FECHA</th>
+                                                                <th>CLIENTE</th>
+                                                                <th>METODO DE PAGO</th>
+                                                                <th>VALOR TOTAL</th>
+                                                                <th>EMPLEADO</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div id="dvMensaje" class=""></div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <!--Tables-->
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <!--Archivos comunes-->
+    <script src="Scripts/Comunes/Comunes/Combos.js"></script>
+    <script src="Scripts/Comunes/Comunes/Tablas.js"></script>
+    <!--Archivos de la página-->
+    <script src="Scripts/.js"></script>
+</body>
+</html>

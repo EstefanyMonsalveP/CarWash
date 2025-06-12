@@ -127,6 +127,7 @@
     <Content Include="Imagenes\Buscar.jpg" />
     <Content Include="Imagenes\Header.jpeg" />
     <Content Include="Paginas\Css\EstilosTabla.css" />
+    <Content Include="Paginas\Facturacion.html" />
     <Content Include="Paginas\QuejaReclamo.html" />
     <Content Include="Paginas\Scripts\Comunes\Comunes\Combos.js" />
     <Content Include="Paginas\Scripts\Comunes\Comunes\Comunes.js" />

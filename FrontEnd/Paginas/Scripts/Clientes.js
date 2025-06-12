@@ -1,10 +1,14 @@
 ﻿var oTabla = $("#tblClientes").DataTable();
+
+
 jQuery(function () {
     //Registrar los botones para responder al evento click
     $("#dvMenu").load("Menu.html");
     //Activar el evento de click en los botones que vamos a programar
     //Con jquery, los objetos se identifican con "$(#" al inicio del nombre del objeto
     LlenarTablaClientes()
+   
+    
     $("#btnInsertar").on("click", function () {
         EjecutarComando("POST");
     });
@@ -20,7 +24,10 @@ jQuery(function () {
         event.preventDefault();
         Consultar();
     });
+
 });
+
+
 
 async function LlenarTablaClientes() {
     LlenarTablaXServicios("https://localhost:44367/api/clientes", "#tblClientes");
@@ -45,6 +52,8 @@ async function Consultar() {
         $("#dvMensaje").html('Error: ' + error.message);
     }
 }
+
+
 async function EjecutarComando(Comando) {
     //Capturar los datos de entrada
     let Documento = $("#txtDocumento").val();
