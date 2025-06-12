@@ -14,14 +14,14 @@ namespace Servicios_lavadero.Controllers
     public class FacturasController: ApiController
     {
         // GET api/<controller>/
-        public List<FacturaYServiciosVistaDTO> Get(int idFactura)
+        public VistaFacturaServicio Get(int idFactura)
         {
             clsFactura _clsFactura = new clsFactura();
             return _clsFactura.ConsultarFactura(idFactura);
         }
 
         //GET api/<controller>/
-        public List<FacturaYServiciosVistaDTO> Get()
+        public List<VistaFacturaServicio> Get()
         {
             clsFactura _clsFactura = new clsFactura();
             return _clsFactura.Facturas();

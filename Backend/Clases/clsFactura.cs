@@ -1,5 +1,4 @@
 ﻿using Servicios_lavadero.Models;
-using Servicios_lavadero.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
@@ -14,9 +13,7 @@ namespace Servicios_lavadero.Clases
         public FACTURA _factura { get; set; }
         public FACTURA_SERVICIO factura_servicio { get; set; }
         public VistaFacturaServicio _vistaFacturaServicio {  get; set; }
-        public FacturaYServiciosVistaDTO _facturaYServiciosVistaDTO {  get; set; }
-
-
+       
 
         public string AgregarFactura(List <FACTURA_SERVICIO> servicios)
         {
@@ -44,29 +41,15 @@ namespace Servicios_lavadero.Clases
         }
 
         //Consultar una factura
-        public List<FacturaYServiciosVistaDTO> ConsultarFactura(int idFactura)
+        public VistaFacturaServicio ConsultarFactura(int idFactura)
         {
-            return dbLavadero.VistaFacturaServicios
-                .Where(s => s.ID_FACTURA == idFactura)
-                .GroupBy(vs => vs.ID_FACTURA)
-                .Select(factura => new FacturaYServiciosVistaDTO
-                {
-                    ID_FACTURA = factura.Key,
-                    Servicios = factura.ToList()
-                }).ToList();
-
+            return dbLavadero.VistaFacturaServicios.FirstOrDefault(f=> f.ID_FACTURA == idFactura);
         }
 
-        //Listar todas las facturas, agrupando los servicios de cada una 
-        public List<FacturaYServiciosVistaDTO> Facturas()
+        //Listar las facturas
+        public List<VistaFacturaServicio> Facturas()
         {
-            return dbLavadero.VistaFacturaServicios
-                .GroupBy(vs => vs.ID_FACTURA)
-                .Select(factura => new FacturaYServiciosVistaDTO
-                {
-                    ID_FACTURA = factura.Key,
-                    Servicios = factura.ToList()
-                }).ToList();
+            return dbLavadero.VistaFacturaServicios.OrderBy(f=> f.ID_FACTURA).ToList();
         }
     }
 
