@@ -316,6 +316,9 @@
     <Compile Include="Models\VEHICULO.cs">
       <DependentUpon>DBLavadero.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VistaFacturaServicio.cs">
+      <DependentUpon>DBLavadero.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

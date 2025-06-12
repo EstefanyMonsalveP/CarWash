@@ -12,25 +12,14 @@ namespace Servicios_lavadero.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class FACTURA
+    public partial class VistaFacturaServicio
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FACTURA()
-        {
-            this.FACTURA_SERVICIO = new HashSet<FACTURA_SERVICIO>();
-        }
-    
         public int ID_FACTURA { get; set; }
         public Nullable<System.DateTime> FECHA { get; set; }
         public string CEDULA_CLIENTE { get; set; }
         public string FORMA_PAGO { get; set; }
+        public string SERVICIOS { get; set; }
         public Nullable<decimal> VALOR_TOTAL { get; set; }
         public string EMPLEADO_ATENCION { get; set; }
-    
-        public virtual CLIENTE CLIENTE { get; set; }
-        public virtual EMPLEADO EMPLEADO { get; set; }
-        public virtual FORMA_PAGO FORMA_PAGO1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FACTURA_SERVICIO> FACTURA_SERVICIO { get; set; }
     }
 }

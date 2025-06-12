@@ -12,6 +12,7 @@ namespace Servicios_lavadero.Clases
         private LAVADEROEntities dbLavadero = new LAVADEROEntities();
         public FACTURA _factura { get; set; }
         public FACTURA_SERVICIO factura_servicio { get; set; }
+        public VistaFacturaServicio _vistaFacturaServicio {  get; set; }
        
 
         public string AgregarFactura(List <FACTURA_SERVICIO> servicios)
@@ -40,15 +41,23 @@ namespace Servicios_lavadero.Clases
         }
 
         //Consultar una factura
-        public FACTURA ConsultarFactura(int idFactura)
+        public VistaFacturaServicio ConsultarFactura(int idFactura)
         {
-            return dbLavadero.FACTURAs.FirstOrDefault(f=> f.ID_FACTURA == idFactura);
+            return dbLavadero.VistaFacturaServicios.FirstOrDefault(
+                f => f.ID_FACTURA == idFactura);
+                
         }
 
         //Listar las facturas
-        public List<FACTURA> Facturas()
+        public List<VistaFacturaServicio> Facturas()
         {
-            return dbLavadero.FACTURAs.OrderBy(f=> f.ID_FACTURA).ToList();
+            return dbLavadero.VistaFacturaServicios
+                .GroupBy(vs => vs.ID_FACTURA)
+                .Select(factura => new
+                {
+                    ID_FACTURA = factura.Key,
+                    SERVICIOS = factura.ToList()
+                }).ToList();
         }
     }
 

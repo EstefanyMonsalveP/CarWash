@@ -42,6 +42,7 @@ namespace Servicios_lavadero.Models
         public virtual DbSet<USUARIO> USUARIOs { get; set; }
         public virtual DbSet<USUARIO_PERFIL> USUARIO_PERFIL { get; set; }
         public virtual DbSet<VEHICULO> VEHICULOes { get; set; }
+        public virtual DbSet<VistaFacturaServicio> VistaFacturaServicios { get; set; }
     
         public virtual int CalcularTotalFactura(Nullable<int> iD_FACTURA)
         {

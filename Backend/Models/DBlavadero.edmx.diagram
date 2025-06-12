@@ -33,6 +33,7 @@
         <AssociationConnector Association="LAVADEROModel.FK__USUARIO_P__id_pe__59063A47" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__VEHICULO__TIPO__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__USUARIO_P__activ__5812160E" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LAVADEROModel.VistaFacturaServicio" Width="1.625" PointX="8.375" PointY="4.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

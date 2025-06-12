@@ -9,7 +9,6 @@
 
 namespace Servicios_lavadero.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,7 +17,7 @@ namespace Servicios_lavadero.Models
         public int ID_QUEJA { get; set; }
         public string DESCRIPCIÓN_QUEJA { get; set; }
         public string CEDULA_CLIENTE { get; set; }
-        [JsonIgnore]
+    
         public virtual CLIENTE CLIENTE { get; set; }
     }
 }

@@ -201,6 +201,7 @@ async function Consultar() {
         $("#txtFecha").val(resultado.FECHA);
         $("#cboClientes").val(resultado.CEDULA_CLIENTE);
         $("#txtServicesSelected").val(resultado.SERVICIOS);
+        $("#numValorTotal").val(resultado.VALOR_TOTAL);
         $("#cboEmpleados").val(resultado.EMPLEADO_ATENCION);
 
     } catch (error) {
@@ -242,7 +243,7 @@ async function EjecutarComando(comando) {
     //Objeto de datos 
     const datosFactura = {
         Factura: facturacion,
-        Servicios: servicio
+        Servicios: servicios
     }
 
     try {

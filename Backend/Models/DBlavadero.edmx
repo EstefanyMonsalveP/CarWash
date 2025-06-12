@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LAVADEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LAVADEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CARGOS">
           <Key>
             <PropertyRef Name="ID" />
@@ -137,6 +137,20 @@
           <Property Name="MODELO" Type="varchar" MaxLength="4" />
           <Property Name="PROPIETARIO" Type="varchar" MaxLength="15" />
           <Property Name="TIPO" Type="int" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VistaFacturaServicios">
+          <Key>
+            <PropertyRef Name="ID_FACTURA" />
+          </Key>
+          <Property Name="ID_FACTURA" Type="int" Nullable="false" />
+          <Property Name="FECHA" Type="date" />
+          <Property Name="CEDULA_CLIENTE" Type="varchar" MaxLength="57" />
+          <Property Name="FORMA_PAGO" Type="varchar" MaxLength="20" />
+          <Property Name="SERVICIOS" Type="varchar" MaxLength="145" />
+          <Property Name="VALOR_TOTAL" Type="money" />
+          <Property Name="EMPLEADO_ATENCION" Type="varchar" MaxLength="55" />
         </EntityType>
         <Association Name="FK__EMPLEADO__CARGO__34C8D9D1">
           <End Role="CARGOS" Type="Self.CARGOS" Multiplicity="0..1" />
@@ -346,6 +360,17 @@
           <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USUARIO_PERFIL" EntityType="Self.USUARIO_PERFIL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VEHICULO" EntityType="Self.VEHICULO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VistaFacturaServicios" EntityType="Self.VistaFacturaServicios" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VistaFacturaServicios].[ID_FACTURA] AS [ID_FACTURA], 
+    [VistaFacturaServicios].[FECHA] AS [FECHA], 
+    [VistaFacturaServicios].[CEDULA_CLIENTE] AS [CEDULA_CLIENTE], 
+    [VistaFacturaServicios].[FORMA_PAGO] AS [FORMA_PAGO], 
+    [VistaFacturaServicios].[SERVICIOS] AS [SERVICIOS], 
+    [VistaFacturaServicios].[VALOR_TOTAL] AS [VALOR_TOTAL], 
+    [VistaFacturaServicios].[EMPLEADO_ATENCION] AS [EMPLEADO_ATENCION]
+    FROM [dbo].[VistaFacturaServicios] AS [VistaFacturaServicios]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__EMPLEADO__CARGO__34C8D9D1" Association="Self.FK__EMPLEADO__CARGO__34C8D9D1">
             <End Role="CARGOS" EntitySet="CARGOS" />
             <End Role="EMPLEADO" EntitySet="EMPLEADO" />
@@ -399,8 +424,7 @@
             <End Role="VEHICULO" EntitySet="VEHICULO" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LAVADEROModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -790,7 +814,7 @@
             <End Role="USUARIO_PERFIL" EntitySet="USUARIO_PERFIL" />
           </AssociationSet>
           <FunctionImport Name="CalcularTotalFactura">
-            <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
+          <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -822,6 +846,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="VistaFacturaServicios" EntityType="LAVADEROModel.VistaFacturaServicio" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -834,6 +859,18 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="VistaFacturaServicio">
+          <Key>
+            <PropertyRef Name="ID_FACTURA" />
+          </Key>
+          <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
+          <Property Name="FECHA" Type="DateTime" Precision="0" />
+          <Property Name="CEDULA_CLIENTE" Type="String" MaxLength="57" FixedLength="false" Unicode="false" />
+          <Property Name="FORMA_PAGO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SERVICIOS" Type="String" MaxLength="145" FixedLength="false" Unicode="false" />
+          <Property Name="VALOR_TOTAL" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="EMPLEADO_ATENCION" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1012,6 +1049,19 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="LAVADEROModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="LAVADEROModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="VistaFacturaServicios">
+            <EntityTypeMapping TypeName="LAVADEROModel.VistaFacturaServicio">
+              <MappingFragment StoreEntitySet="VistaFacturaServicios">
+                <ScalarProperty Name="EMPLEADO_ATENCION" ColumnName="EMPLEADO_ATENCION" />
+                <ScalarProperty Name="VALOR_TOTAL" ColumnName="VALOR_TOTAL" />
+                <ScalarProperty Name="SERVICIOS" ColumnName="SERVICIOS" />
+                <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+                <ScalarProperty Name="CEDULA_CLIENTE" ColumnName="CEDULA_CLIENTE" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
