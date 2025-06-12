@@ -154,7 +154,6 @@ async function EjecutarComando(comando) {
         ID_FACTURA: factura,
         FECHA: fecha,
         CEDULA_CLIENTE: cliente,
-        servicios: servicios,
         EMPLEADO_ATENCION: empleado
     }
     try {
