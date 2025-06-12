@@ -23,8 +23,34 @@
         Consultar();
     });
 
+    $("#btnAñadir").on("click", function (event) {
+        event.preventDefault();
+        AñadirServicio();
+    })
     
 });
+
+async function AñadirServicio() {
+    //Captura el valor del servicio 
+    const $select = $("#cboServicios");
+    const value = $select.val(); //captura el value
+    const descripcion = $select.find('option:selected').text()
+
+    //Captura el txtArea
+    let serviciosSeleccionados = $("#txtServicesSelected");
+
+    const servicio = `${value} - ${descripcion}`;
+
+    //Captura el valor actual del txtArea
+    let textoActual = serviciosSeleccionados.val();
+
+    //Agrega el nuevo servicio
+    let nuevoTexto = textoActual ? textoActual + ";"+ '\n' + servicio : servicio;
+
+
+
+    serviciosSeleccionados.val(nuevoTexto);
+}
 
 async function LlenarComboServicio() {
     LlenarComboXServicios("https://localhost:44367/api/Servicios", "#cboServicios")
@@ -126,7 +152,7 @@ async function EjecutarComando(comando) {
             method: comando,
             mode: "cors",
             headers: { "Content-type": "application/json" },
-            body: JSON.stringify(datosVehiculo)
+            body: JSON.stringify(datosFactura)
         });
         //Leer la respuesta y presentarla en el div
         const resultado = await respuesta.json();
