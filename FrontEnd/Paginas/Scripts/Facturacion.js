@@ -34,7 +34,6 @@
         $(this).addClass("seleccionado");
     })
 
-    
     $("#btnRetirar").on("click", function (event) {
         event.preventDefault();
         RetirarServicio();
@@ -48,11 +47,13 @@ async function AñadirServicio() {
     const $select = $("#cboServicios");//Captura el cbo
     const value = $select.val(); //captura el value
     const descripcion = $select.find('option:selected').text() //Captura la opcion asociada al value
-    const servicio = `${value} - ${descripcion}`; //Une el value y la opcion
+    const cantidad = $("#numCantidad").val();
+    const servicio = `${value} - ${descripcion} - CANT: ${cantidad}`; //Une el value y la opcion
     const $div = $('<div></div>') //Crea un div
         .addClass('servicio')//Agrega la clase 
         .text(servicio) //Agrega el texto en la variable del servicio
-        .attr('data-id', value); //Crea el atributo para capturar los datos
+        .attr('data-id', value) //Crea el atributo para capturar el id 
+        .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
 
     $('#listaServicios').append($div);
 }
@@ -146,16 +147,34 @@ async function EjecutarComando(comando) {
     let factura = $("#txtFactura").val();
     let fecha = $("#txtFecha").val();
     let cliente = $("#cboClientes").val();
-    let servicios = $("#txtServicesSelected").val();
+    let metodoPago = $("#cboMetodoPago").val();
     let empleado = $("#cboEmpleados").val()
 
-    //Construir la estructura JSON para enviar la información al servidor
-    let datosFactura = {
+    //Datos de factura
+    let factura = { 
         ID_FACTURA: factura,
         FECHA: fecha,
         CEDULA_CLIENTE: cliente,
+        FORMA_PAGO: metodoPago,
         EMPLEADO_ATENCION: empleado
     }
+
+    //Datos de servicio
+    let servicios = [];
+
+    $("#listaServicios .servicio").each(function () {
+        servicios.push({
+            ID_SERVICIO: parseInt($this).attr("data-id"),
+            CANTIDAD: parseInt($this).atrr("data-cantidad")
+        })
+    })
+
+    //Objeto de datos 
+    const datosFactura = {
+        Factura: factura,
+        Servicios: servicio
+    }
+
     try {
         const respuesta = await fetch("https://localhost:44367/api/Facturas", {
             method: comando,

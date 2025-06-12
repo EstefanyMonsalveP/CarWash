@@ -181,6 +181,7 @@
     <Content Include="Paginas\Index.html" />
     <Content Include="Paginas\Scripts\Empleado.js" />
     <Content Include="Paginas\Scripts\Clientes.js" />
+    <Content Include="Paginas\Scripts\Facturacion.js" />
     <Content Include="Paginas\Scripts\Menu.js" />
     <Content Include="Paginas\Scripts\QuejaReclamo.js" />
     <Content Include="Paginas\Scripts\Vehiculo.js" />
