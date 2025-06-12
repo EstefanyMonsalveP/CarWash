@@ -9,6 +9,7 @@
 
 namespace Servicios_lavadero.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,8 +19,9 @@ namespace Servicios_lavadero.Models
         public string MODELO { get; set; }
         public string PROPIETARIO { get; set; }
         public Nullable<int> TIPO { get; set; }
-    
+        [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
+        [JsonIgnore]
         public virtual TIPOVEHICULO TIPOVEHICULO { get; set; }
     }
 }

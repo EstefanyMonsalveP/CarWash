@@ -9,6 +9,7 @@
 
 namespace Servicios_lavadero.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -23,6 +24,7 @@ namespace Servicios_lavadero.Models
         public int ID { get; set; }
         public string DESCRIPCION { get; set; }
         public Nullable<decimal> VALOR { get; set; }
+        [JsonIgnore]
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA_SERVICIO> FACTURA_SERVICIO { get; set; }
