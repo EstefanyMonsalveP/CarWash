@@ -28,7 +28,6 @@
     $("#btnAñadir").on("click", function (event) {
         event.preventDefault();
         AñadirServicio();
-        ValorApagar();
     })
 
     //Remueve la clase seleccionado de todos los servicios y se agrega unicamente al seleccionado
@@ -59,6 +58,8 @@ async function AñadirServicio() {
         .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
 
     $('#listaServicios').append($div);
+
+    ValorApagar();
 }
 async function ValorApagar() {
     let acumulador = 0;
@@ -70,6 +71,8 @@ async function ValorApagar() {
             acumulador += valorTotal;
         })
         return acumulador;
+
+        $("#numValorTotal").val(acumulador);
     }catch (error) {
         $("#dvMensaje").html(error);
     }
@@ -101,6 +104,7 @@ async function LlenarComboMetodoPago() {
 //Elimina el servicio de la factura
 async function RetirarServicio() {
     $('.servicio.seleccionado').remove()
+    ValorApagar();
 }
 
 async function LlenarComboServicio() {
@@ -207,6 +211,7 @@ async function EjecutarComando(comando) {
     let fecha = $("#txtFecha").val();
     let cliente = $("#cboClientes").val();
     let metodoPago = $("#cboMetodoPago").val();
+    let valorTotal = $("#numValorTotal").val();
     let empleado = $("#cboEmpleados").val()
 
     //Datos de factura
@@ -215,6 +220,7 @@ async function EjecutarComando(comando) {
         FECHA: fecha,
         CEDULA_CLIENTE: cliente,
         FORMA_PAGO: metodoPago,
+        VALOR_TOTAL: valorTotal,
         EMPLEADO_ATENCION: empleado
     }
 
