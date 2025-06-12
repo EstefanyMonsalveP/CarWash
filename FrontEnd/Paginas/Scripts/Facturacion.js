@@ -57,8 +57,23 @@ async function AñadirServicio() {
         .attr('data-cantidad', cantidad);//Crea el atributo para capturar la cantidad 
 
     $('#listaServicios').append($div);
+    console.log($('#listaServicios'))
 }
-
+async function valorApagar() {
+    let acumulador = 0;
+    try {
+        $("#listaServicios .servicio").each(function () {
+            const cantidad = parseInt($(this).attr("data-cantidad"));
+            const precio = parseInt($(this).attr("data-precio"));
+            let valorTotal = cantidad * precio;
+            acumulador += valorTotal;
+        })
+        return acumulador;
+    }catch (error) {
+        $("#dvMensaje").html(error);
+    }
+    
+}
 async function LlenarComboMetodoPago() {
     try {
         const Respuesta = await fetch("https://localhost:44367/api/FormasPago",
@@ -207,8 +222,8 @@ async function EjecutarComando(comando) {
 
     $("#listaServicios .servicio").each(function () {
         servicios.push({
-            ID_SERVICIO: parseInt($this).attr("data-id"),
-            CANTIDAD: parseInt($this).atrr("data-cantidad")
+            ID_SERVICIO: parseInt($(this).attr("data-id")),
+            CANTIDAD: parseInt($(this).attr("data-cantidad"))
         })
     })
 
