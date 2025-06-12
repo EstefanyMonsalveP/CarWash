@@ -60,7 +60,26 @@ async function AñadirServicio() {
 }
 
 async function LlenarComboMetodoPago() {
-    LlenarComboXServicios("https://localhost:44367/api/FormasPago", "#cboMetodoPago");
+    try {
+        const Respuesta = await fetch("https://localhost:44367/api/FormasPago",
+            {
+                method: "GET",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+        const Rpta = await Respuesta.json();
+        //Se debe limpiar el combo
+        $("#cboMetodoPago").empty();
+        //Se recorre en un ciclo para llenar el select con la información
+        for (i = 0; i < Rpta.length; i++) {
+            $("#cboMetodoPago").append('<option value=' + Rpta[i].ID_PAGO + '>' + Rpta[i].DESCRIPCION_PAGO + '</option>');
+        }
+    } catch (error) {
+        //Se presenta la respuesta en el div mensaje
+        $("#dvMensaje").html(error);
+    }
 }
 
 //Elimina el servicio de la factura
