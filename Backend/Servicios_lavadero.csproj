@@ -227,6 +227,7 @@
     <Compile Include="Clases\clsFactura.cs" />
     <Compile Include="Clases\ClsPerfil.cs" />
     <Compile Include="Clases\clsQueja_Reclamo.cs" />
+    <Compile Include="Clases\clsServicio.cs" />
     <Compile Include="Clases\clsTipoVehiculo.cs" />
     <Compile Include="Clases\clsTurno.cs" />
     <Compile Include="Clases\ClsUsuario.cs" />
@@ -238,6 +239,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PerfilesController.cs" />
     <Compile Include="Controllers\Queja_ReclamosController.cs" />
+    <Compile Include="Controllers\ServiciosController.cs" />
     <Compile Include="Controllers\TipoVehiculosController.cs" />
     <Compile Include="Controllers\TurnosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
