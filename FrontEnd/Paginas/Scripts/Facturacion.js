@@ -64,7 +64,26 @@ async function RetirarServicio() {
 }
 
 async function LlenarComboServicio() {
-    LlenarComboXServicios("https://localhost:44367/api/Servicios", "#cboServicios")
+    try {
+        const Respuesta = await fetch("https://localhost:44367/api/Servicios",
+            {
+                method: "GET",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+        const Rpta = await Respuesta.json();
+        //Se debe limpiar el combo
+        $("#cboServicios").empty();
+        //Se recorre en un ciclo para llenar el select con la información
+        for (i = 0; i < Rpta.length; i++) {
+            $("#cboServicios").append('<option value=' + Rpta[i].ID + '>' + Rpta[i].DESCRIPCION + " - " + "VAL.UNIDAD: $ "+Rpta[i].VALOR + '</option>');
+        }
+    } catch (error) {
+    //Se presenta la respuesta en el div mensaje
+        $("#dvMensaje").html(error);
+    }
 }
 
 async function LlenarComboEmpleados() {
@@ -151,7 +170,7 @@ async function EjecutarComando(comando) {
     let empleado = $("#cboEmpleados").val()
 
     //Datos de factura
-    let factura = { 
+    let facturacion = { 
         ID_FACTURA: factura,
         FECHA: fecha,
         CEDULA_CLIENTE: cliente,
@@ -171,7 +190,7 @@ async function EjecutarComando(comando) {
 
     //Objeto de datos 
     const datosFactura = {
-        Factura: factura,
+        Factura: facturacion,
         Servicios: servicio
     }
 
