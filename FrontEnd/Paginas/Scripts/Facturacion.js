@@ -144,6 +144,11 @@ async function AñadirServicio() {
     const descripcion = $option.text() //Captura la opcion asociada al value
     const cantidad = $("#numCantidad").val();
     const precio = $option.data('precio'); 
+    if (cantidad == "") {
+        alert("seleccione la cantidad");
+        return
+    }
+    
     const servicio = `${value} - ${descripcion} - CANT: ${cantidad} - VALOR_UNIDAD: ${precio}`; //Une el value y la opcion
     const $div = $('<div></div>') //Crea un div
         .addClass('servicio')//Agrega la clase 
