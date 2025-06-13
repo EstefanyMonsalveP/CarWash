@@ -19,6 +19,7 @@ namespace Servicios_lavadero.Models
         public string MODELO { get; set; }
         public string PROPIETARIO { get; set; }
         public Nullable<int> TIPO { get; set; }
+
         [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
         [JsonIgnore]

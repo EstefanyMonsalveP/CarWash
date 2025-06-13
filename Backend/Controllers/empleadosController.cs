@@ -26,13 +26,13 @@ namespace Servicios_lavadero.Controllers
             return empleado.ConsultarEmpleado(cedula);
         }
 
-        /*[HttpGet]
+        
         [Route("ConsultarConCargo")]
         public IQueryable ConsultarConCargo(string Documento)
         {
             clsEmpleado _empleado = new clsEmpleado();
             return _empleado.ConsultarConCargo(Documento);
-        }*/
+        }
 
         // POST api/<controller>
         public string Post([FromBody] EMPLEADO empleado_nuevo)

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="582475d19503470aaf594586d6d57ff3" Name="Diagram1">
+      <Diagram DiagramId="002ef0d7554b4714b69515a3c0679ede" Name="Diagram1">
         <EntityTypeShape EntityType="LAVADEROModel.CARGO" Width="1.5" PointX="1.5" PointY="12.625" IsExpanded="true" />
         <EntityTypeShape EntityType="LAVADEROModel.CLIENTE" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LAVADEROModel.EMPLEADO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
@@ -20,6 +20,7 @@
         <EntityTypeShape EntityType="LAVADEROModel.USUARIO" Width="1.5" PointX="3" PointY="17.375" IsExpanded="true" />
         <EntityTypeShape EntityType="LAVADEROModel.USUARIO_PERFIL" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
         <EntityTypeShape EntityType="LAVADEROModel.VEHICULO" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LAVADEROModel.VistaFacturaServicio" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
         <AssociationConnector Association="LAVADEROModel.FK__EMPLEADO__CARGO__34C8D9D1" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__FACTURA__CEDULA___3A81B327" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__QUEJA_REC__CEDUL__267ABA7A" ManuallyRouted="false" />
@@ -33,7 +34,6 @@
         <AssociationConnector Association="LAVADEROModel.FK__USUARIO_P__id_pe__59063A47" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__VEHICULO__TIPO__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="LAVADEROModel.FK__USUARIO_P__activ__5812160E" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="LAVADEROModel.VistaFacturaServicio" Width="1.625" PointX="8.375" PointY="4.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

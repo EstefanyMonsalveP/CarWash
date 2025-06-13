@@ -23,8 +23,8 @@ namespace Servicios_lavadero.Models
     
         public int ID { get; set; }
         public string DESCRIPCION { get; set; }
-        [JsonIgnore]
 
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VEHICULO> VEHICULOes { get; set; }
     }

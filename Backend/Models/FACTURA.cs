@@ -27,10 +27,8 @@ namespace Servicios_lavadero.Models
         public string FORMA_PAGO { get; set; }
         public Nullable<decimal> VALOR_TOTAL { get; set; }
         public string EMPLEADO_ATENCION { get; set; }
-
         [JsonIgnore]
         public virtual CLIENTE CLIENTE { get; set; }
-        [JsonIgnore]
         public virtual EMPLEADO EMPLEADO { get; set; }
         [JsonIgnore]
         public virtual FORMA_PAGO FORMA_PAGO1 { get; set; }

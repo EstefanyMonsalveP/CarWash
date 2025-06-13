@@ -20,10 +20,11 @@ namespace Servicios_lavadero.Models
         {
             this.FACTURAs = new HashSet<FACTURA>();
         }
+    
         public string ID_PAGO { get; set; }
         public string DESCRIPCION_PAGO { get; set; }
-        [JsonIgnore]
 
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA> FACTURAs { get; set; }
     }

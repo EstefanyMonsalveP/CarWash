@@ -29,7 +29,7 @@ namespace Servicios_lavadero.Models
         public string DIRECCION { get; set; }
         public Nullable<int> CARGO { get; set; }
         public Nullable<int> TURNO { get; set; }
-        [JsonIgnore]
+    
         public virtual CARGO CARGO1 { get; set; }
         [JsonIgnore]
         public virtual TURNO TURNO1 { get; set; }

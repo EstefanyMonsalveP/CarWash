@@ -1,9 +1,13 @@
 ﻿using Servicios_lavadero.Models;
+using Servicios_lavadero.Models.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Common.CommandTrees;
+using System.Data.Entity.Core.Mapping;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
+using System.Web.Http.Validation.Providers;
 
 namespace Servicios_lavadero.Clases
 {
@@ -13,6 +17,7 @@ namespace Servicios_lavadero.Clases
         public FACTURA _factura { get; set; }
         public FACTURA_SERVICIO factura_servicio { get; set; }
         public VistaFacturaServicio _vistaFacturaServicio {  get; set; }
+        public FacturaDTO _facturaDTO { get; set; }
        
 
         public string AgregarFactura(List <FACTURA_SERVICIO> servicios)
@@ -40,12 +45,7 @@ namespace Servicios_lavadero.Clases
             return "Se genero correctamente la factura";
         }
 
-        //Consultar una factura
-        public VistaFacturaServicio ConsultarFactura(int idFactura)
-        {
-            return dbLavadero.VistaFacturaServicios.FirstOrDefault(f=> f.ID_FACTURA == idFactura);
-        }
-
+        
         //Listar las facturas
         public List<VistaFacturaServicio> Facturas()
         {

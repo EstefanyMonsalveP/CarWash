@@ -12,13 +12,7 @@ namespace Servicios_lavadero.Controllers
 {
     [EnableCors(origins: "https://localhost:44315", headers: "*", methods: "*")]
     public class FacturasController: ApiController
-    {
-        // GET api/<controller>/
-        public VistaFacturaServicio Get(int idFactura)
-        {
-            clsFactura _clsFactura = new clsFactura();
-            return _clsFactura.ConsultarFactura(idFactura);
-        }
+    {      
 
         //GET api/<controller>/
         public List<VistaFacturaServicio> Get()

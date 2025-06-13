@@ -29,7 +29,9 @@ namespace Servicios_lavadero.Models
         public string TELEFONO { get; set; }
         public string EMAIL { get; set; }
         public string DIRECCION { get; set; }
+
         [JsonIgnore]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FACTURA> FACTURAs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

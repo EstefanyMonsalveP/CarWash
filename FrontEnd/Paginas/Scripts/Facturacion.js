@@ -144,6 +144,8 @@ async function AñadirServicio() {
     const descripcion = $option.text() //Captura la opcion asociada al value
     const cantidad = $("#numCantidad").val();
     const precio = $option.data('precio'); 
+
+    //Si cantidad es vacio, enviar alerta al usuario para que ingrese la cantidad
     if (cantidad == "") {
         alert("seleccione la cantidad");
         return
@@ -185,27 +187,6 @@ async function ValorApagar() {
     
 }
 
-async function Consultar() {
-    let factura = $("#txtFactura").val();
-    try {
-        const respuesta = await fetch("https://localhost:44367/api/Facturas?idFactura=" + factura, {
-            method: "GET",
-            mode: "cors",
-            headers: { "Content-type": "application/json" },
-        });
-
-        const resultado = await respuesta.json();
-
-        $("#txtFecha").val(resultado.FECHA);
-        $("#cboClientes").val(resultado.CEDULA_CLIENTE);
-        $("#txtServicesSelected").val(resultado.SERVICIOS);
-        $("#numValorTotal").val(resultado.VALOR_TOTAL);
-        $("#cboEmpleados").val(resultado.EMPLEADO_ATENCION);
-
-    } catch (error) {
-        $("#dvMensaje").html(error);
-    }
-}
 
 //Ejecuta los comandos PUT, POST, GET 
 async function EjecutarComando(comando) {

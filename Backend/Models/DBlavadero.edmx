@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="LAVADEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="LAVADEROModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CARGOS">
           <Key>
             <PropertyRef Name="ID" />
@@ -147,10 +147,10 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
           <Property Name="ID_FACTURA" Type="int" Nullable="false" />
           <Property Name="FECHA" Type="date" />
           <Property Name="CEDULA_CLIENTE" Type="varchar" MaxLength="57" />
-          <Property Name="SERVICIOS" Type="varchar" MaxLength="8000" />
           <Property Name="FORMA_PAGO" Type="varchar" MaxLength="20" />
+          <Property Name="SERVICIOS" Type="varchar" MaxLength="8000" />
           <Property Name="VALOR_TOTAL" Type="money" />
-          <Property Name="EMPLEADO_ATENCION" Type="varchar" MaxLength="55" />
+          <Property Name="EMPLEADO_ATENCION" Type="varchar" MaxLength="57" />
         </EntityType>
         <Association Name="FK__EMPLEADO__CARGO__34C8D9D1">
           <End Role="CARGOS" Type="Self.CARGOS" Multiplicity="0..1" />
@@ -310,40 +310,6 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="CalcularTotalFactura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ID_FACTURA" Type="int" Mode="In" />
-        </Function>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="LAVADEROModelStoreContainer">
           <EntitySet Name="CARGOS" EntityType="Self.CARGOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
@@ -365,8 +331,8 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
     [VistaFacturaServicios].[ID_FACTURA] AS [ID_FACTURA], 
     [VistaFacturaServicios].[FECHA] AS [FECHA], 
     [VistaFacturaServicios].[CEDULA_CLIENTE] AS [CEDULA_CLIENTE], 
-    [VistaFacturaServicios].[SERVICIOS] AS [SERVICIOS], 
     [VistaFacturaServicios].[FORMA_PAGO] AS [FORMA_PAGO], 
+    [VistaFacturaServicios].[SERVICIOS] AS [SERVICIOS], 
     [VistaFacturaServicios].[VALOR_TOTAL] AS [VALOR_TOTAL], 
     [VistaFacturaServicios].[EMPLEADO_ATENCION] AS [EMPLEADO_ATENCION]
     FROM [dbo].[VistaFacturaServicios] AS [VistaFacturaServicios]</DefiningQuery>
@@ -424,7 +390,8 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
             <End Role="VEHICULO" EntitySet="VEHICULO" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LAVADEROModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -586,6 +553,18 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
           <Property Name="TIPO" Type="Int32" />
           <NavigationProperty Name="CLIENTE" Relationship="Self.FK__VEHICULO__PROPIE__2B3F6F97" FromRole="VEHICULO" ToRole="CLIENTE" />
           <NavigationProperty Name="TIPOVEHICULO" Relationship="Self.FK__VEHICULO__TIPO__2C3393D0" FromRole="VEHICULO" ToRole="TIPOVEHICULO" />
+        </EntityType>
+        <EntityType Name="VistaFacturaServicio">
+          <Key>
+            <PropertyRef Name="ID_FACTURA" />
+          </Key>
+          <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
+          <Property Name="FECHA" Type="DateTime" Precision="0" />
+          <Property Name="CEDULA_CLIENTE" Type="String" MaxLength="57" FixedLength="false" Unicode="false" />
+          <Property Name="FORMA_PAGO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SERVICIOS" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Name="VALOR_TOTAL" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="EMPLEADO_ATENCION" Type="String" MaxLength="57" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__EMPLEADO__CARGO__34C8D9D1">
           <End Role="CARGOS" Type="Self.CARGO" Multiplicity="0..1" />
@@ -761,6 +740,7 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
           <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
           <EntitySet Name="USUARIO_PERFIL" EntityType="Self.USUARIO_PERFIL" />
           <EntitySet Name="VEHICULOes" EntityType="Self.VEHICULO" />
+          <EntitySet Name="VistaFacturaServicios" EntityType="Self.VistaFacturaServicio" />
           <AssociationSet Name="FK__EMPLEADO__CARGO__34C8D9D1" Association="Self.FK__EMPLEADO__CARGO__34C8D9D1">
             <End Role="CARGOS" EntitySet="CARGOS" />
             <End Role="EMPLEADO" EntitySet="EMPLEADOes" />
@@ -813,64 +793,7 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
             <End Role="USUARIO" EntitySet="USUARIOs" />
             <End Role="USUARIO_PERFIL" EntitySet="USUARIO_PERFIL" />
           </AssociationSet>
-          <FunctionImport Name="CalcularTotalFactura">
-          <Parameter Name="ID_FACTURA" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_alterdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_creatediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="version" Mode="In" Type="Int32" />
-            <Parameter Name="definition" Mode="In" Type="Binary" />
-          </FunctionImport>
-          <FunctionImport Name="sp_dropdiagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(LAVADEROModel.sp_helpdiagramdefinition_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(LAVADEROModel.sp_helpdiagrams_Result)">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_renamediagram">
-            <Parameter Name="diagramname" Mode="In" Type="String" />
-            <Parameter Name="owner_id" Mode="In" Type="Int32" />
-            <Parameter Name="new_diagramname" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="sp_upgraddiagrams" />
-          <EntitySet Name="VistaFacturaServicios" EntityType="LAVADEROModel.VistaFacturaServicio" />
         </EntityContainer>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
-        <EntityType Name="VistaFacturaServicio">
-          <Key>
-            <PropertyRef Name="ID_FACTURA" />
-          </Key>
-          <Property Name="ID_FACTURA" Type="Int32" Nullable="false" />
-          <Property Name="FECHA" Type="DateTime" Precision="0" />
-          <Property Name="CEDULA_CLIENTE" Type="String" MaxLength="57" FixedLength="false" Unicode="false" />
-          <Property Name="FORMA_PAGO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="SERVICIOS" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
-          <Property Name="VALOR_TOTAL" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="EMPLEADO_ATENCION" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1024,41 +947,16 @@ advertencia 6002: La tabla o vista 'LAVADERO.dbo.VistaFacturaServicios' no tiene
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="CalcularTotalFactura" FunctionName="LAVADEROModel.Store.CalcularTotalFactura" />
-          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="LAVADEROModel.Store.sp_alterdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="LAVADEROModel.Store.sp_creatediagram" />
-          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="LAVADEROModel.Store.sp_dropdiagram" />
-          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="LAVADEROModel.Store.sp_helpdiagramdefinition">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="LAVADEROModel.sp_helpdiagramdefinition_Result">
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="LAVADEROModel.Store.sp_helpdiagrams">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="LAVADEROModel.sp_helpdiagrams_Result">
-                <ScalarProperty Name="Database" ColumnName="Database" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="LAVADEROModel.Store.sp_renamediagram" />
-          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="LAVADEROModel.Store.sp_upgraddiagrams" />
           <EntitySetMapping Name="VistaFacturaServicios">
             <EntityTypeMapping TypeName="LAVADEROModel.VistaFacturaServicio">
               <MappingFragment StoreEntitySet="VistaFacturaServicios">
-                <ScalarProperty Name="EMPLEADO_ATENCION" ColumnName="EMPLEADO_ATENCION" />
-                <ScalarProperty Name="VALOR_TOTAL" ColumnName="VALOR_TOTAL" />
-                <ScalarProperty Name="SERVICIOS" ColumnName="SERVICIOS" />
-                <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
-                <ScalarProperty Name="CEDULA_CLIENTE" ColumnName="CEDULA_CLIENTE" />
-                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
                 <ScalarProperty Name="ID_FACTURA" ColumnName="ID_FACTURA" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="CEDULA_CLIENTE" ColumnName="CEDULA_CLIENTE" />
+                <ScalarProperty Name="FORMA_PAGO" ColumnName="FORMA_PAGO" />
+                <ScalarProperty Name="SERVICIOS" ColumnName="SERVICIOS" />
+                <ScalarProperty Name="VALOR_TOTAL" ColumnName="VALOR_TOTAL" />
+                <ScalarProperty Name="EMPLEADO_ATENCION" ColumnName="EMPLEADO_ATENCION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
